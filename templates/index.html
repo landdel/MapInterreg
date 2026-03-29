@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultats de l'app</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Resultats de l'app</h1>
+    <p class="subtitle">Interface web minimaliste pour executer le traitement et ouvrir la carte.</p>
+
+    <section class="actions">
+      <form method="post">
+        <button type="submit" name="action" value="geocode">1. Generer locations.csv</button>
+      </form>
+      <form method="post">
+        <button type="submit" name="action" value="map">2. Generer la carte</button>
+      </form>
+      <form method="post">
+        <button type="submit" name="action" value="all">Tout executer</button>
+      </form>
+    </section>
+
+    <section class="result">
+      <h2>Importer adresses.csv</h2>
+      <form method="post" enctype="multipart/form-data" class="upload-form">
+        <input type="file" name="addresses_file" accept=".csv" required>
+        <button type="submit" name="action" value="upload">Charger un fichier adresses</button>
+      </form>
+      {% if upload_message %}
+        <p>{{ upload_message }}</p>
+      {% endif %}
+    </section>
+
+    {% if execution_results %}
+      <section class="logs">
+        <h2>Execution</h2>
+        {% for result in execution_results %}
+          <article class="log-card {{ 'ok' if result.ok else 'error' }}">
+            <h3>{{ result.script }} - {{ 'OK' if result.ok else 'ERREUR' }}</h3>
+            {% if result.stdout %}
+              <pre>{{ result.stdout }}</pre>
+            {% endif %}
+            {% if result.stderr %}
+              <pre>{{ result.stderr }}</pre>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    <section class="result">
+      <h2>Dernier resultat</h2>
+      <p class="download-links">
+        <a href="{{ url_for('download_latest_map') }}">Telecharger la carte</a>
+        {% if locations_exists %}
+          <a href="{{ url_for('download_locations') }}">Telecharger locations.csv</a>
+        {% else %}
+          <span>locations.csv non genere pour l'instant</span>
+        {% endif %}
+      </p>
+      {% if latest_map %}
+        <p><a href="{{ url_for('serve_result', filename=latest_map) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
+        <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map) }}"></iframe>
+      {% else %}
+        <p>Aucune carte trouvee dans le dossier <code>result/</code>.</p>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>

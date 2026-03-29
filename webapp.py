@@ -1,0 +1,101 @@
+from pathlib import Path
+import subprocess
+import sys
+
+from flask import Flask, abort, render_template, request, send_file, send_from_directory
+
+
+BASE_DIR = Path(__file__).resolve().parent
+RESULT_DIR = BASE_DIR / "result"
+ADDRESSES_FILE = BASE_DIR / "adresses.csv"
+LOCATIONS_FILE = BASE_DIR / "locations.csv"
+
+app = Flask(__name__)
+
+
+def run_python_script(script_name: str) -> dict:
+    script_path = BASE_DIR / script_name
+    completed = subprocess.run(
+        [sys.executable, str(script_path)],
+        cwd=BASE_DIR,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    return {
+        "script": script_name,
+        "ok": completed.returncode == 0,
+        "returncode": completed.returncode,
+        "stdout": completed.stdout.strip(),
+        "stderr": completed.stderr.strip(),
+    }
+
+
+def find_latest_map() -> Path | None:
+    if not RESULT_DIR.exists():
+        return None
+
+    maps = sorted(
+        RESULT_DIR.glob("map_*.html"),
+        key=lambda item: item.stat().st_mtime,
+        reverse=True,
+    )
+    return maps[0] if maps else None
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    execution_results = []
+    upload_message = None
+
+    if request.method == "POST":
+        action = request.form.get("action", "").strip().lower()
+
+        if action == "geocode":
+            execution_results.append(run_python_script("coordinates.py"))
+        elif action == "map":
+            execution_results.append(run_python_script("mapping.py"))
+        elif action == "all":
+            execution_results.append(run_python_script("coordinates.py"))
+            if execution_results[-1]["ok"]:
+                execution_results.append(run_python_script("mapping.py"))
+        elif action == "upload":
+            uploaded_file = request.files.get("addresses_file")
+            if uploaded_file and uploaded_file.filename:
+                ADDRESSES_FILE.write_bytes(uploaded_file.read())
+                upload_message = "adresses.csv a ete remplace avec succes."
+            else:
+                upload_message = "Aucun fichier selectionne."
+
+    latest_map = find_latest_map()
+    return render_template(
+        "index.html",
+        latest_map=latest_map.name if latest_map else None,
+        locations_exists=LOCATIONS_FILE.exists(),
+        execution_results=execution_results,
+        upload_message=upload_message,
+    )
+
+
+@app.route("/result/<path:filename>")
+def serve_result(filename: str):
+    return send_from_directory(RESULT_DIR, filename)
+
+
+@app.route("/download/map")
+def download_latest_map():
+    latest_map = find_latest_map()
+    if latest_map is None:
+        abort(404, description="Aucune carte generee.")
+    return send_file(latest_map, as_attachment=True, download_name=latest_map.name)
+
+
+@app.route("/download/locations")
+def download_locations():
+    if not LOCATIONS_FILE.exists():
+        abort(404, description="Le fichier locations.csv est introuvable.")
+    return send_file(LOCATIONS_FILE, as_attachment=True, download_name="locations.csv")
+
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=5000, debug=False)

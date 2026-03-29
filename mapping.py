@@ -1,30 +1,36 @@
 import folium
-from folium_jsbutton import JsButton
 import pandas as pd
 import json
 from folium.plugins import MarkerCluster
 import datetime
 import numpy as np
 from sklearn.cluster import DBSCAN
-from html import escape  # Permet d'échapper correctement les caractères spéciaux
+from html import escape  # Permet d'Ã©chapper correctement les caractÃ¨res spÃ©ciaux
 import branca
+from pathlib import Path
+
+try:
+    from folium_jsbutton import JsButton
+except ImportError:
+    JsButton = None
 
 
-# Charger les données depuis le fichier CSV
+
+# Charger les donnÃ©es depuis le fichier CSV
 file_path = "locations.csv"  # Chemin du fichier CSV
 data = pd.read_csv(file_path, delimiter=';', skipinitialspace=True, dtype=str, engine='python',encoding="utf-8")
 data["latitude"] = pd.to_numeric(data["latitude"], errors='coerce')
 data["longitude"] = pd.to_numeric(data["longitude"], errors='coerce')
 
 
-# Supprimer les entrées avec des valeurs non numériques dans les colonnes latitude et longitude
+# Supprimer les entrÃ©es avec des valeurs non numÃ©riques dans les colonnes latitude et longitude
 data = data[pd.to_numeric(data["latitude"], errors='coerce').notna() & pd.to_numeric(data["longitude"], errors='coerce').notna()]
 config_file_path = "CONFIG.txt"
 
-# Charger les fichiers GeoJSON pour les départements français et provinces belges
-with open('zone\FR_Departements.geojson', 'r', encoding='utf-8') as f:
+# Charger les fichiers GeoJSON pour les dÃ©partements franÃ§ais et provinces belges
+with open(Path('zone') / 'FR_Departements.geojson', 'r', encoding='utf-8') as f:
     france_geojson = json.load(f)
-with open('zone\BE_Arrondissements.geojson', 'r', encoding='utf-8') as f:
+with open(Path('zone') / 'BE_Arrondissements.geojson', 'r', encoding='utf-8') as f:
     belgium_geojson = json.load(f)
 
 # Calculer la position centrale
@@ -48,12 +54,12 @@ point_name ="Points"
 cluster_name="Clusters"
 color_point ="blue"
 
-threshold_km1 = 10  # Remplacez par la valeur souhaitée
+threshold_km1 = 10  # Remplacez par la valeur souhaitÃ©e
 threshold_km1_name = "Zone 10 Km"
 color_group1 = "blue"
 impactFactor1 = 500
 
-threshold_km2 = 20  # Remplacez par la valeur souhaitée
+threshold_km2 = 20  # Remplacez par la valeur souhaitÃ©e
 threshold_km2_name = "Zone 20 Km"
 color_group2 = "blue"
 impactFactor2 = 500
@@ -103,7 +109,7 @@ with open(config_file_path, "r",encoding="utf-8") as file:
         elif line.startswith("THRESHHOLD KM ONE"):
 
             threshold_km1 = int(line.split(" : ")[1].strip())
-            threshold_km1_name = "Zone de "+str(threshold_km1)+" kilomètres"
+            threshold_km1_name = "Zone de "+str(threshold_km1)+" kilomÃ¨tres"
         elif line.startswith("COLOR GROUPE ONE"):
 
             color_group1 = "#{:02x}{:02x}{:02x}".format(*tuple(map(int, line.split(" : ", 1)[1].strip("()").split(","))))
@@ -113,7 +119,7 @@ with open(config_file_path, "r",encoding="utf-8") as file:
 
         elif line.startswith("THRESHHOLD KM TWO"):
             threshold_km2 = int(line.split(" : ")[1].strip())
-            threshold_km2_name = "Zone de " + str(threshold_km2) + " kilomètres"
+            threshold_km2_name = "Zone de " + str(threshold_km2) + " kilomÃ¨tres"
         elif line.startswith("COLOR GROUPE TWO"):
             color_group2 = "#{:02x}{:02x}{:02x}".format(*tuple(map(int, line.split(" : ", 1)[1].strip("()").split(","))))
         elif line.startswith("IMPACT FACTOR TWO"):
@@ -125,7 +131,7 @@ with open(config_file_path, "r",encoding="utf-8") as file:
 threshold_radians1 = threshold_km1 / 6371.0
 threshold_radians2 = threshold_km2 / 6371.0
 
-# Créer une carte centrée
+# CrÃ©er une carte centrÃ©e
 m = folium.Map(location=[XOrigin, YOrigin], zoom_start=8)
 
 folium.TileLayer(
@@ -133,25 +139,26 @@ folium.TileLayer(
     attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
          'contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     name='CartoDB Dark Matter',
-    show=False # Désactive la couche au démarrage
+    show=False # DÃ©sactive la couche au dÃ©marrage
 ).add_to(m)
 
-JsButton(
-    title='<i class="fas fa-crosshairs"></i>',
-    function="""
-    function(btn, map) {
-        var xOrigin = %f;
-        var yOrigin = %f;
-        map.setView([xOrigin, yOrigin], 8);
-        btn.state('zoom-to-forest');
-    }
-    """ % (XOrigin, YOrigin)
-).add_to(m)
+if JsButton is not None:
+    JsButton(
+        title='<i class="fas fa-crosshairs"></i>',
+        function="""
+        function(btn, map) {
+            var xOrigin = %f;
+            var yOrigin = %f;
+            map.setView([xOrigin, yOrigin], 8);
+            btn.state('zoom-to-forest');
+        }
+        """ % (XOrigin, YOrigin)
+    ).add_to(m)
 
-# Ajouter une couche pour la légende
-legend_layer = folium.FeatureGroup(name="Légende", show=True)
+# Ajouter une couche pour la lÃ©gende
+legend_layer = folium.FeatureGroup(name="LÃ©gende", show=True)
 
-# Générer dynamiquement la légende à partir de df_points
+# GÃ©nÃ©rer dynamiquement la lÃ©gende Ã  partir de df_points
 legend_html = """
     <div style="
         position: absolute; 
@@ -163,14 +170,14 @@ legend_html = """
         z-index: 9999; 
         width: 220px;
     ">
-    <b>Légende :</b><br>
+    <b>LÃ©gende :</b><br>
 """
 
-# Ajouter chaque catégorie avec sa couleur et forme spécifique
+# Ajouter chaque catÃ©gorie avec sa couleur et forme spÃ©cifique
 for _, row in df_points.iterrows():
     shape = row["shape"]
     color = row["color"]
-    name_cat = escape(row["name_Cat"])  # Échapper les caractères spéciaux pour l'affichage HTML
+    name_cat = escape(row["name_Cat"])  # Ã‰chapper les caractÃ¨res spÃ©ciaux pour l'affichage HTML
 
     if shape == "circle":
         shape_html = f'<i style="display:inline-block; width:12px; height:12px; border-radius:50%; background-color:{color};"></i>'
@@ -179,11 +186,11 @@ for _, row in df_points.iterrows():
     elif shape == "triangle":
         shape_html = f'<i style="display:inline-block; width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-bottom:12px solid {color};"></i>'
     else:
-        shape_html = f'<i style="display:inline-block; width:12px; height:12px; background-color:{color};"></i>'  # Par défaut
+        shape_html = f'<i style="display:inline-block; width:12px; height:12px; background-color:{color};"></i>'  # Par dÃ©faut
 
     legend_html += f"{shape_html} {name_cat}<br>"
 
-# Ajouter les autres éléments de la légende (zones géographiques)
+# Ajouter les autres Ã©lÃ©ments de la lÃ©gende (zones gÃ©ographiques)
 legend_html += f"""
     <i style="display:inline-block; width:12px; height:12px; background-color:{color_area_wallonie};"></i> {escape("Wallonie")}<br>
     <i style="display:inline-block; width:12px; height:12px; background-color:{color_area_vlaanderen};"></i> {escape("Flandre")}<br>
@@ -191,13 +198,13 @@ legend_html += f"""
     </div>
 """
 
-# Ajouter la légende sur la carte
+# Ajouter la lÃ©gende sur la carte
 m.get_root().html.add_child(folium.Element(legend_html))
 
-# Ajouter une couche pour les régions INTERREG (départements français et provinces belges)
+# Ajouter une couche pour les rÃ©gions INTERREG (dÃ©partements franÃ§ais et provinces belges)
 interreg_layer = folium.FeatureGroup(name=area_name, show=True)
 for feature in france_geojson['features']:
-    if feature['properties']['nom'] in highlight_area_france:  # Modifier la clé selon votre GeoJSON
+    if feature['properties']['nom'] in highlight_area_france:  # Modifier la clÃ© selon votre GeoJSON
         folium.GeoJson(
             feature,
             style_function=lambda x: {'fillColor': color_area_france, 'color': color_area_france, 'weight': 1, 'fillOpacity': 0.4},
@@ -206,7 +213,7 @@ for feature in france_geojson['features']:
 
 
 for feature in belgium_geojson['features']:
-    if feature['properties']['name'] in highlight_area_wallonie:  # Modifier la clé selon votre GeoJSON
+    if feature['properties']['name'] in highlight_area_wallonie:  # Modifier la clÃ© selon votre GeoJSON
         folium.GeoJson(
             feature,
             style_function=lambda x: {'fillColor': color_area_wallonie, 'color': color_area_wallonie, 'weight': 1, 'fillOpacity': 0.4},
@@ -215,7 +222,7 @@ for feature in belgium_geojson['features']:
 interreg_layer.add_to(m)
 
 for feature in belgium_geojson['features']:
-    if feature['properties']['name'] in highlight_area_vlaanderen:  # Modifier la clé selon votre GeoJSON
+    if feature['properties']['name'] in highlight_area_vlaanderen:  # Modifier la clÃ© selon votre GeoJSON
         folium.GeoJson(
             feature,
             style_function=lambda x: {'fillColor': color_area_vlaanderen, 'color': color_area_vlaanderen, 'weight': 1, 'fillOpacity': 0.4},
@@ -223,17 +230,17 @@ for feature in belgium_geojson['features']:
         ).add_to(interreg_layer)
 interreg_layer.add_to(m)
 
-# Ajouter une couche pour les points d'intérêt
+# Ajouter une couche pour les points d'intÃ©rÃªt
 points_layer = folium.FeatureGroup(name=point_name, show=True)
 
 for _, row in data.iterrows():
-    # Récupérer la couleur et la forme en fonction de la catégorie
+    # RÃ©cupÃ©rer la couleur et la forme en fonction de la catÃ©gorie
     category = row["category"]
     point_info = df_points[df_points["category"] == category].iloc[0]
     color_point = point_info["color"]
     shape = point_info["shape"]
 
-    # Définition du popup avec la structure demandée
+    # DÃ©finition du popup avec la structure demandÃ©e
     popup_text = f"[{escape(category)}] {escape(row['name'])}<br>{escape(row['url'])}"
 
     # Ajout du point en fonction de la forme
@@ -251,7 +258,7 @@ for _, row in data.iterrows():
     elif shape == "square":
         folium.RegularPolygonMarker(
             location=[row["latitude"], row["longitude"]],
-            number_of_sides=4,  # Carré
+            number_of_sides=4,  # CarrÃ©
             radius=6,  # Ajuster la taille
             color=color_point,
             fill=True,
@@ -286,7 +293,7 @@ cluster_layer.add_to(m)
 
 
 
-# Préparer les coordonnées des points
+# PrÃ©parer les coordonnÃ©es des points
 coords = data[['latitude', 'longitude']].to_numpy()
 
 
@@ -315,8 +322,8 @@ for cluster_label in set(data['cluster']):
         # Ajouter un grand point pour le cluster
         folium.Circle(
             location=[center_lat, center_lon],
-            radius=(len(cluster_points)*impactFactor1*threshold_km1)/2,  # Taille du point regroupé
-            color=color_group1,  # Couleur du point regroupé
+            radius=(len(cluster_points)*impactFactor1*threshold_km1)/2,  # Taille du point regroupÃ©
+            color=color_group1,  # Couleur du point regroupÃ©
             fill=True,
             fill_color=color_group1,
             fill_opacity=0.7,
@@ -324,7 +331,7 @@ for cluster_label in set(data['cluster']):
         ).add_to(grouped_points_layer)
 
     else:
-        # Ajouter les points isolés s'ils ne sont pas dans un cluster
+        # Ajouter les points isolÃ©s s'ils ne sont pas dans un cluster
         single_point = cluster_points.iloc[0]
         folium.Circle(
             location=[single_point['latitude'], single_point['longitude']],
@@ -333,15 +340,15 @@ for cluster_label in set(data['cluster']):
             fill=True,
             fill_color=color_point,
             fill_opacity=0.6,
-            popup=f"Point isolé : {single_point['name']}"
+            popup=f"Point isolÃ© : {single_point['name']}"
         ).add_to(grouped_points_layer)
 
 grouped_points_layer.add_to(m)
 
-# Ajouter une nouvelle couche pour les points regroupés selon le deuxième seuil
+# Ajouter une nouvelle couche pour les points regroupÃ©s selon le deuxiÃ¨me seuil
 grouped_points_layer_2 = folium.FeatureGroup(name=threshold_km2_name, show=False)
 
-# Regrouper les points par cluster pour le deuxième seuil
+# Regrouper les points par cluster pour le deuxiÃ¨me seuil
 for cluster_label in set(data['cluster_2']):
     cluster_points = data[data['cluster_2'] == cluster_label]
 
@@ -353,15 +360,15 @@ for cluster_label in set(data['cluster_2']):
         # Ajouter un grand point pour le cluster
         folium.Circle(
             location=[center_lat, center_lon],
-            radius=(len(cluster_points) * impactFactor2*threshold_km2) / 2,  # Taille du point regroupé
-            color=color_group2,  # Couleur du point regroupé
+            radius=(len(cluster_points) * impactFactor2*threshold_km2) / 2,  # Taille du point regroupÃ©
+            color=color_group2,  # Couleur du point regroupÃ©
             fill=True,
             fill_color=color_group2,
             fill_opacity=0.7,
             popup=f"Cluster avec {len(cluster_points)} points"
         ).add_to(grouped_points_layer_2)
     else:
-        # Ajouter les points isolés s'ils ne sont pas dans un cluster
+        # Ajouter les points isolÃ©s s'ils ne sont pas dans un cluster
         single_point = cluster_points.iloc[0]
         folium.Circle(
             location=[single_point['latitude'], single_point['longitude']],
@@ -370,18 +377,18 @@ for cluster_label in set(data['cluster_2']):
             fill=True,
             fill_color=color_point,
             fill_opacity=0.6,
-            popup=f"Point isolé : {single_point['name']}"
+            popup=f"Point isolÃ© : {single_point['name']}"
         ).add_to(grouped_points_layer_2)
 
-# Ajouter la couche à la carte
+# Ajouter la couche Ã  la carte
 grouped_points_layer_2.add_to(m)
 
-# Ajouter le contrôle des couches
+# Ajouter le contrÃ´le des couches
 folium.LayerControl().add_to(m)
 
 original_filename = 'result/map'
 
-# Générer le timecode au format désiré
+# GÃ©nÃ©rer le timecode au format dÃ©sirÃ©
 timecode = datetime.datetime.now().strftime("%Y%m%d_%H%M")
 
 # Ajouter le timecode au nom du fichier
@@ -390,4 +397,5 @@ filename_with_timecode = original_filename+"_"+timecode+".html"
 # Sauvegarder la carte dans un fichier HTML
 m.save(filename_with_timecode)
 
-print("Fichier enregistré avec le nom :", filename_with_timecode)
+print("Fichier enregistrÃ© avec le nom :", filename_with_timecode)
+
