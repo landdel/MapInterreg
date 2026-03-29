@@ -1,0 +1,137 @@
+category;type;field;name;acronym;street;postnumber;zipcode;city;country;url;Latitude;Longitude
+MEDI;Hôpital;autre;Grand Hôpital de Charleroi;Ghdc;Rue du campus des Viviers ;1;6060;Gilly;Belgique ;https://www.ghdc.be/;;
+MEDI;Hôpital;Médecine ;CHU Tivoli;/;Avenue Max Buset;34;7100;La Louvière;Belgique;https://chu-tivoli.be/;;
+MEDI;Hôpital;autre;Hôpital Saint-Pierre Bruxelles;???;Rue aux Laines;105;1000;Bruxelles;Belgique;https://www.stpierre-bru.be/;;
+MEDI;Hôpital;Médecine;Cliniques Universitaires Saint-Luc;CUSL;Avenue Hippocrate;10;1200;Bruxelles;Belgique;https://www.saintluc.be/fr;;
+PRIV;Entreprise (<250 personnes);autre;Apex Orthopédie sel;Apex Orthopédie ;Chaussée De Tongres ;382;4000;Liege ;Belgique ;https://apexorthopedie.be/;;
+MEDI;Hôpital;Facilitation;Clinique du Dr STER ;STER;Avenue Jean Ster ;9;34240;Lamalou les bains ;France;http://www.cliniques-ster.com/lamalou-les-bains/accueil/;43,595269;3,079825
+MEDI;Hôpital;autre;Cliniques Universitaires Saint Luc;CUSL;Avenue hippocrate;10;1200;Bruxelles ;BELGIQUE;https://www.saintluc.be/;;
+MEDI;Hôpital;autre;CHU Tivoli;Tivoli;Avenue Max Buset;34;7100;La Louvière ;Belgique ;https://www.chu-tivoli.be/;;
+MEDI;Hôpital;autre;Grand hôpital de Charleroi;GHDC;Rue du campus des Viviers;1;6060;Gilly;Belgique;https://www.ghdc.be/;;
+PRIV;Entreprise (<250 personnes);Ingénierie & technologie (impression 3D);Bone3D;/;Rue Alexandre Cabanel;7;75015;Paris;France;http://www.bone3d.fr/;;
+PRIV;Entreprise (<250 personnes);Recherche;Poietis;/;Avenue de Canteranne;11;33600;Pessac;France;https://www.poietis.com/;;
+PRIV;Entreprise (<250 personnes);Médecine;Lattice Medical;/;Boulevard du Professeur Jules Leclercq;/;59000;Lille;France;https://www.lattice-medical.com/;;
+PRIV;Entreprise (<250 personnes);Médecine;AnatomikModeling;/;Hôpital Larrey, Chemin de Pouvourville;/;31400;Toulouse;France;https://www.anatomikmodeling.com/fr;;
+MEDI;Hôpital;Médecine;AP-HP (PRIM3D);PRIM3D;Hôpital de la Pitié-Salpêtrière, Bd de l'Hôpital;47-83;75013;Paris;France;https://www.aphp.fr/;48,837644;2,365013
+MEDI;Hôpital;Médecine;AP-HM (Marseille);AP-HM;Rue Brochier;80;13005;Marseille;France;https://ap-hm.fr/;;
+PRIV;Entreprise (?250 personnes);Ingénierie & technologie (impression 3D);Materialise;/;Technologielaan;15;3001;Leuven;Belgique;https://www.materialise.com/en;;
+PRIV;Entreprise (<250 personnes);Médecine;CERHUM;/;Rue Bois Saint-Jean;12;4102;Seraing;Belgique;https://cerhum.com/;;
+PRIV;Entreprise (<250 personnes);Médecine;3D-Side;/;Rue Louis de Geer;6;1348;Louvain-la-Neuve;Belgique;https://www.3d-side.com/;;
+MEDI;Hôpital;Médecine;UZ Leuven – 3D Core Facility;/;Herestraat;49;3000;Leuven;Belgique;https://www.uzleuven.be/;;
+MEDI;Hôpital;Médecine;UZ Gent – 3D Lab;/;C. Heymanslaan;10;9000;Gent;Belgique;https://uzgent.be/;51,023089;3,723135
+PRIV;Entreprise (<250 personnes);Ingénierie & technologie (impression 3D);Xilloc;/;Urmonderbaan;22;6167 RD;Geleen;Pays-Bas;https://www.xilloc.com/;;
+PRIV;Entreprise (<250 personnes);Ingénierie & technologie (impression 3D);3D Medical Models;/;/;/;/;Eindhoven;Pays-Bas;https://www.3dmedicalmodels.nl/;;
+MEDI;Hôpital;Médecine;UMC Utrecht – 3D Lab;/;Heidelberglaan;100;3584 CX;Utrecht;Pays-Bas;https://umcutrecht.nl/;;
+MEDI;Hôpital;Médecine;Radboudumc – 3D Lab;/;Geert Grooteplein Zuid;10;6525 GA;Nijmegen;Pays-Bas;https://www.radboudumc.nl/;;
+MEDI;Hôpital;Médecine;UMC Groningen – 3D Lab;/;Hanzeplein;1;9713 GZ;Groningen;Pays-Bas;https://www.umcg.nl/;;
+MEDI;Hôpital;Médecine;Centre hospitalier universitaire de Lille;CHU Lille;Avenue Oscar Lambret;2;59000;Lille;France;https://www.chu-lille.fr/;;
+PRSC;Centre de recherche;Technologie;CEntre de Ressources TEchnologiques en Chimie;Certech;Rue Jules Bordet;/;7180;Seneffe;Belgique;https://www.certech.be/;;
+PRSC;Université;Multidisciplinaire;Université de Mons;UMONS;Place du Parc;20;7000;Mons;Belgique;https://web.umons.ac.be/;;
+PRSC;Université;Multidisciplinaire;Universiteit Gent;UGent;Sint-Pietersnieuwstraat;25;9000;Gent;Belgique;https://www.ugent.be/;;
+MEDI;Hôpital universitaire;Médecine;Universitair Ziekenhuis Gent;UZ Gent;Corneel Heymanslaan;10;9000;Gent;Belgique;https://uzgent.be/;;
+PRSC;Université;Technologie;VIVES Zuid vzw;/;Doorniksesteenweg;145;8500;Kortrijk;Belgique;https://www.vives.be/;;
+PRSC;Université;Multidisciplinaire;Université de Lille;/;Rue Paul Duez;42;59800;Lille;France;https://www.univ-lille.fr/;;
+PRSC;Université;Technologie;Centrale Lille;/;Cité scientifique;CS20048;59651;Villeneuve d’Ascq;France;https://centralelille.fr/;50,607523;3,133407
+ENAB;Réseau d’innovation / Collectivité;Santé;Eurasanté;/;Rue du Dr Yersin;70;59120;Loos;France;eurasante.com;50,605379;3,025115
+PRSC;Centre de recherche;Pluridisciplinaire;Centre National de la Recherche Scientifique;CNRS;Cité scientifique;36;59650;Villeneuve d’Ascq;France;https://www.cnrs.fr/;;
+PRIV;Entreprise (<250 personnes);Fabrication additive (métal);3D Metal Print;3D-MP;Route de Watten;31H;62910;Houlle;France;https://www.3d-metalprint.com/;50,797406;2,176279
+PRIV;Entreprise (<250 personnes);Prothèses / impression 3D;Prothexpert;/;Rue Salvador Allende;260;59120;Loos;France;https://www.prothexpert.com/;;
+PRIV;Entreprise (<250 personnes);Médecine dentaire;NK Dental;/;Place de la Charte;3;7390;Quaregnon;Belgique;http://nkdental.be/;;
+MEDI;Hôpital;Médecine dentaire;AP-HM – Hôpital de la Timone (Pôle odontologie);AP-HM;Rue Saint-Pierre;264;13005;Marseille;France;http://ap-hm.fr/service/pole-odontologie-batiment-5-hopital-de-la-timone;;
+MEDI;Hôpital;Médecine dentaire;CHU Marseille – Service de prothèses dentaires 3D;/;Rue Saint-Pierre;264;13005;Marseille;France;https://ap-hm.fr/;;
+PRSC;Centre de recherche;Ingénierie & technologie (autres);Gmake;/;Rue du Joncquois;53;7000;Mons;Belgique;https://web.umons.ac.be/gmec/gmake/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);CIHA ASBL / KapLab;/;rue GrandFosse;31-33;4130;Esneux;Belgique;https://www.kaplab.be/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Fundació iSocial;/;Carrer de Sancho de Ávila, Sant Martí;105;08018;Barcelona;Espagne;https://isocial.cat/;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Kerpape - CMRRF Kerpape;/;CMRRF Kerpape , Laboratoire d'Électronique ;/;56275;Ploemeur;France;https://novap.fehap.fr/candidats/rehab-lab-lieu-unique-a-kerpape/;47,702484;-3,419676
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);ALTYLAB - ALTYGO - Pôle Enfant;/;Rue du Docteur Abel Violette ;17;22193;Plerin Cedex;France;altylab@altygo.org;48,546269;-2,725775
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);ASPID Lleida - Fablab;/;C/ Príncep de Viana;34;/;Lleida;Espagne;https://aspid.cat/ca/ ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Adèl'LAB;/;Av. du Neuhof;80;67100;Strasbourg;France;https://www.glaubitz.fr/ ;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Ampans REHAB-LAB - Ampans;/;c/Sant Rafael;4;08243;Manresa;Espagne;https://ampans.cat;41,721166;1,837462
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Associació Alba;/;Plaça Major;1;25340;Verdú, Lleida;Espagne;https://aalba.cat/;41,610326;1,143042
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);CMPR Côte d'Amour;/;Rue Michel Ange;57;44600;Saint Nazaire;France;https://kap-ouest.fr/centre-cote-damour/;;
+PRSC;Centre de recherche;Ingénierie & technologie (impression 3D);Centre de Recherche IRMA - Institut Robert Merle d'Aubigné;/;rue du Emilion MICHAUT et Lucien RABEUX;2;94460;Valenton;France;http://www.irma-valenton.fr/;48,750335;2,465014
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Crea 3D - Fundació ASPACE Catalunya;/;Carrer dels Tres Pins, Sants-Montjuïc;29;08038;Barcelona;Espagne;https://aspace.cat/es/ ;41,366646;2,159556
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Ergo Fabriq;/; Av. du Dr Marcel Armanet;/;83400;Hyères;France;https://www.leonberard.com/actualites/dernieres-actualites/fab-lab-hopital-leon-berard--ergo-fabriq;43,087093;6,117637
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Ergothérapie - Rehab lab Michel Arthuis;/;avenue du Roule;42-46;92200;NEUILLY SUR SEINE;France;https://www.association-notre-dame.org/#/ ;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Fundacio Maresme;/;Carrer de la Pagesia;19;08304;Mataró, Barcelona;Espagne;https://www.fundaciomaresme.cat/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Fundació Onada;/;C/ Riu Llobregat;10;43006;Tarragona;Espagne;https://www.fundacioonada.org/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Fundació Ramon Noguera;/;Avinguda Montilivi;123;17003;Girona;Espagne;https://grupfrn.cat/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Lab' Tech Melioris;/;Rue de la Verrerie;74;79000;NIORT;France;https://www.melioris-association.fr/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Laboratoire Autonomie et Communication - Fondation John Bost;/;Rue du Pasteur Allard;17;24130;LA FORCE;France;https://www.johnbost.org/innovation/labo-autocom/;;
+PRSC;Centre de recherche;Ingénierie & technologie (impression 3D);REHAB-LAB - AUVA RZ Meidling;/;Köglerstraße;2a;1120;Vienna;Autriche;https://auva.at/gesundheitseinrichtungen/rz-meidling/ ;48,172339;16,344873
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Beaulieu - Clinique FSEF Rennes Beaulieu;/;avenue des Buttes de Coësmes;41;35700;RENNES;France;https://www.fsef.net/etablissements/clinique-fsef-rennes-beaulieu ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Calvé - Centre J.Calvé;/; Esplanade Parmentier;72;62600;BERCK;France;http://www.fondation-hopale.org/ (dans un nouvel onglet);;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Clinique FSEF de Bouffémont;/;Rue Pasteur;5;95570;BOUFFEMONT;France;https://fsef-sante-etudes.fr/;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Ildys - Fondation ILDYS - Centre de Rééducation de Perharidy;/;Route de Perharidy;/;29680;ROSCOFF;France;https://www.facebook.com/rehablab.ildys.9/ ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Inté-Gré - Clinique FSEF GRENOBLE LA TRONCHE;/; avenue des Maquis du Grésivaudan;8;38702;LA TRONCHE;France;http://www.fsef.net/index.php/138-etablissements/clinique-du-gresivaudan ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB La Tour de Gassies - La Tour de Gassies - CMPR et CRPS;/;Rue de la Tour de Gassies;/;33523;BRUGES;France;https://www.groupe-ugecam.fr/centre-de-la-tour-de-gassies ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB Myonov;/;route Yolaine de Kepper;1465;01465; Saint-Georges-Sur-Loire;France;/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);SMR - BEL AIR REHAB-LAB - Croix-rouge;/;Lieu dit Bel Air;/;37390;La Membrolle sur Choisille;France;https://www.belair-crf.com/ (dans un nouvel onglet);47,434382;0,644794
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Service Ergothérapie - REHAB-LAB Centre de l'Arche;/;Boulevard de Maule;1;72650;SAINT-SATURNIN;France;https://asso-prh.fr/centre-de-larche-2/ (dans un nouvel onglet);;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Vivalia - CIHA / Kaplab;/;Av. de Houffalize;35;6800;Libramont-Chevigny;Belgique;https://www.vivalia.be/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);WPRINT - CHU Brest;/;Rue Pierre Maximin Audemar;85;29200;Brest;France;https://www.chu-brest.fr/centre-dinnovation-winn ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);makeLab Imphy - FAM - APF Imphy;/; rue Louis Pasteur;7;58160;IMPHY;France;https://www.facebook.com/makeLabImphy/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);3D'Achon Lab - Foyer Guillaume d'Achon - APF 35;/;40 boulevard Charles-Péguy;40;35700;RENNES;France;/;48,119255;-1,651124
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);ADAPEI 58;/;Rte De Beauregard;120;58130;Urzy;France;https://www.adapei58.org/ ;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);ARAMAV;/;chemin du belvédère;12;30900;Nîmes;France;https://aramav.fr/ (dans un nouvel onglet);;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Althaia, Xarxa Assistencial Universitària Manresa;/;Dr. Joan Soler ;1;08243;Manresa;Espagne;https://www.althaia.cat/;41,720279;1,839044
+PRSC;Université;Ingénierie & technologie (impression 3D);CENoTe - HPEVM;/;12/14 rue du Val d’Osne;12;94410;SAINT-MAURICE;France;/;48,820250;2,423432
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);CHRRF La Châtaigneraie;/;Rue Bernard Astruc;/;95180;MENUCOURT;France;https://lachataigneraie.fr/menucourt/ ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Centre Hospitalier Bretagne Atlantique;/;Boulevard Général Maurice Guillaudot;20;56017;Vannes;France;https://www.ch-bretagne-atlantique.fr/;47,665359;-2,747782
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Centre de Réadaptation de Coubert;/;Route de Liverdy;1384;77170;Coubert;France;https://www.groupe-ugecam.fr/cr-coubert;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Centre de médecine physique et de réadaptation (CMPR) COS - COS CMPR (Bobigny);/;Avenue Paul Vaillant Couturier;359;93000;BOBIGNY;France;https://www.fondationcos.org/centre-de-medecine-physique-et-de-readaptation-cmpr-cos;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Concept Lab 3D;/;allée du lez;9;26790;La Baume de Transit;France;/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);EHPAD René Fortin - Le Rehab-lab de René;/;/;/;/;Brest;France;https://www.chu-brest.fr/ehpad-centre-rene-fortin-bohars ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);ESEAN Lab - ESEAN - APF Nantes;/;Rue des Bourdonnières;58;44200;NANTES;France;ESEAN | Association APF France handicap;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Equipe&Moi 56 - REHAB-LAB Equipe&Moi 56;/;rue Emile Eudes;10;56100;LORIENT;France;https://bretagne.vyv3.fr/nos-activites/equipe-moi-mon-quotidien-adapte;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Ergo - Centre Hospitalier des Marches de Bretagne;/;rue Jean-Marie Laloy;1;35560;Val-Couesnon;France;https://www.chmarchesdebretagne.fr/ ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Ergo - Villa Notre Dame;/;Avenue Notre Dame;45;85800;Saint-Gilles-Croix-de-Vie;France;https://www.villa-notre-dame.fr/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Ergothérapie - LADAPT HAUTS-DE-FRANCE;/;route de Solesmes;121;59400;CAMBRAI;France;/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Esclatec (Associació Esclat);/;Pl. del Guinardó, Horta-Guinardó;8;08041;Barcelona;Espagne;/;41,416024;2,181226
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);FAM APF Terro Flourido;/;rue Pierre Poisson;2;84000;AVIGNON;France;https://annuaire.action-sociale.org/?p=foyer-d-accueil-medicalise--terro-flourido--840015259&details=caracteristiques;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);FAM Sainte-Geneviève - FAM Sainte Geneviève;/;rue des plantes;66;75014;PARIS;France;https://www.ndbs.org/etablissements/foyer-daccueil-medicalise-fam-saint-genevieve/;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);FabLab Les MacGyver;/;rue de la République;13;54320;Maxéville;France;https://fablablesmacgyver.jbthiery.asso.fr/ (dans un nouvel onglet);;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Foyer Bourgarel APF France handicap;/;rue des Bas Menus;38;28000;Chartres;France;https://pole-28.apf-francehandicap.org/residence-jacques-bourgarel;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Fundació privada Mifas;/;Rambla de Xavier Cugat;43;17007;Girona;Espagne;https://www.mifas.cat/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Guttmann REHAB-LAB - Institut Guttmann;/;Camí De Can Ruti, S/N;/;08916;Badalona, Barcelona;Espagne;https://www.guttmann.com ;;
+ENAB;Centre de recherche;Ingénierie & technologie (impression 3D);Humanlab Saint-Pierre - Institut St-Pierre;/;av de l’Evêché de Maguelone;371;34250;PALAVAS-LES-FLOTS;France;https://www.humanlabsaintpierre.org/ ;;
+ENAB;Centre de recherche;Ingénierie & technologie (impression 3D);Hôpital Henry Gabrielle - Hospices Civils de Lyon - CHU;/;Quai des Célestins;3;69002;LYON;France;https://www.chu-lyon.fr/hopital-henry-gabrielle ;;
+MEDI;Hôpital universitaire;Ingénierie & technologie (impression 3D);Hôpital Maritime Zuydcoote;/;Bd Vancauwenberghe;/;59123;Zuydcoote;France;https://www.ch-zuydcoote.fr/ ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);I3D Propara - CMN PROPARA;/; 263 rue du caducée;263;34090;MONTPELLIER;France;https://propara.fr/ ;43,643589;3,832578
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Icom'provence;/;boulevard de la Barasse;100;/;/;France;https://icomprovence.net/ ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);LADAPT LOIRET ESMR ERGO - ESMR LADAPT LOIRET;/;D Rue des Bourgoins;658;45200;Amilly;France;https://www.ladapt.net/etablissement-service-centre-val-de-loire-loiret ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);MPR - CHU Martinique;/;La Meynard;632;97261;Fort-de-France Cedex;France;https://www.chu-martinique.fr/ (dans un nouvel onglet);45,463524;0,854386
+MEDI;Hôpital universitaire;Ingénierie & technologie (impression 3D);PMPR ergothérapie - Fondation Mallet;/;Route de Gressey;22;78550;Richebourg;France;https://www.fondationmallet.fr/ (dans un nouvel onglet);;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Pole Keraman APF France Handicap;/;Avenue de Limerick;24;29000;QUIMPER;France;Association APF France handicap;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Pôle Santé - CMPR Bretegnier;/;rue du Dr. Gaulier;14;70400;HERICOURT;France;CMPR Bretegnier - Pôle santé - Fondation Arc-en-ciel;47,576923;6,756391
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);R3aDapt'lab - IEM - APF Limoges 87;/;Avenue de la Gare;23;87270;Couzeix;France;https://www.iem87apffrancehandicap.com/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);"REHAB-LAB ""I-LABO"" - IEM OLBIA";/;Route de l'Almanarre;/;83400;HYERES LES PALMIERS;France;/;47,730771;-3,477547
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB - Labo des possibles;/;Rue Keryan;4;56270;PLOEMEUR;France;https://www.crscopoly.com/labo-des-possibles-scopoly ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB CIUS Nice - Centre d'Innovation et d'Usages en Santé;/; rue Professeur Delvalle;27;06000;NICE;France;Home | CIUS;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB Garches - CHU Garches;/; Boulevard Raymond Poincaré;104;92380;GARCHES;France;https://raymondpoincare.aphp.fr/ ;;
+MEDI;Hôpital universitaire;Ingénierie & technologie (impression 3D);REHAB-LAB Institut Universitaire de Réadaptation Clémenceau - IURC;/;Boulevard Clemenceau;45;67000;STRASBOURG;France;Pôle IURC site de Strasbourg à STRASBOURG | GROUPE UGECAM;49,316209;2,449778
+PRSC;Centre de recherche;Ingénierie & technologie (impression 3D);REHAB-LAB Mini-Makers Cauffry - Pôle enfance SEM - APF Cauffry;/;Collège Simone Veil , Route Sailleville;/;60290;CAUFFRY;France;SEM Cauffry - APF France handicap - Taxe Apprentissage;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB Mini-Makers Compiègne - Pôle enfance SESSAD - APF Compiègne;/;avenue de l'Europe;7;60200;COMPIEGNE;France;Association APF France handicap;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB Richelieu - CRF Richelieu - Croix rouge;/;rue Philippe Vincent;37;17028;La Rochelle;France;Centre Richelieu - Croix Rouge Française - La Rochelle (17) - Charente-Maritime;42,675892;9,436851
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);REHAB-LAB SAVS APF Cismonte - SAVS - APF Cismonte;/;Rond-point de Falcunaja , Route Royale;/;20600;BASTIA;France;Savs apf cismonte - Savs apf cismonte - Bastia | Santé.fr;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAB-LAB Toulouse Lautrec - SESSAD - EREA Toulouse Lautrec;/;avenue de la Celle-Saint-Cloud;131;92420;VAUCRESSON;France;Sessad erea toulouse lautrec pep 92 | Santé.fr;49,628329;6,174273
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);REHAZENTER;/;Rue André Vésale, Luxembourg;1;L-2674;Luxembourg;Luxembourg;Accueil - Rehazenter;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Rehab Lab Motivation - 3D assistive devices for wheelchair users - Motivation Romania Foundation;/;Podisor Street;1;77071;Buda;Roumanie;https://www.motivation.ro/en (dans un nouvel onglet);;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Rehab-Lab - centre médical Rocheplane;/;Rue Massenet;6;38400;Saint-Martin-d'Hères;France;http://www.rocheplane.org/ (dans un nouvel onglet);;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);RéCI Bruxelles - RéCI;/;Rue Edouard Fiers ;1;1030;Schaerbeek;Belgique;https://www.reci-bruxelles.be/ ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);SAMSAH APF France handicap Chartres;/;rue Vincent Chevard;26;28000;Chartres;France;https://taxe-apprentissage.apf-francehandicap.org/structure/sessad-chartres/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);SESSAD Finistère - APF 29;/;Avenue Baron Lacrosse;22;29850;GOUESNOU;France;https://sessadapf29.weebly.com/ ;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);SIRC Nepal - SIRC Rehab-Lab;/;/;/;/;/;Népal;https://www.sirc.org.np/ ;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Service d'Ergothérapie - PÔLE DE RÉADAPTATION DE CORNOUAILLE;/;Rue de Tregunc;61;29900;CONCARNEAU;France;Pôle de Réadaptation de Cornouaille - Concarneau à CONCARNEAU | GROUPE UGECAM;43,926309;2,131795
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Service d'ergothérapie - REHAB-LAB CRMF ALBI VYV3;/;Rue Angély Cavaillé;/;81000;ALBI;France;https://www.facebook.com/CMRF.Albi/ ;47,350578;1,155357
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Service d'ergothérapie - SMR de la Menaudière;/;allee de la Menaudière;2;41400;MONTRICHARD CEDEX;France;https://proximite.mgen.fr/212-etablissement-smr-de-la-menaudiere ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Service d'ergothérapie - SOSAN SMR;/;rue de Guetteloup;64;72100;Le Mans;France;https://www.sosan.fr/soins-medicaux-et-de-readaptation/ (dans un nouvel onglet);;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Service de Réadaptation Visuelle - Hôpital de Jour Baudin - Limoges;/;rue André Messager;14;87000;LIMOGES;France;https://www.mutualitelimousine.fr/hospitalisation-readaptation/hopital-de-jour-baudin ;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Service de médecine physique et de réadaptation - Groupe Hospitalier du Havre;/;rue Gustave;55;76600;Le Havre;France;Accueil – Groupe Hospitalier du Havre - Groupe Hospitalier du Havre;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Villa Rosa Rehab-Lab - Rehabilitation Hospital - Villa Rosa;/;via Spolverine;84;38057;Pergine Valsugana (TN);Italie;https://www.apss.tn.it/Azienda/Unita-operative-e-strutture/Unita-operativa-riabilitazione-ospedaliera-Villa-Rosa (dans un nouvel onglet);;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Àuria Fundació;/;Avinguda Andorra;28;08700;Igualada, Barcelona, Catalunya;Espagne;https://www.auriagrup.cat/;;
+CITZ;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Caserta Local Health Authority – Frailty Department (Caserta ASL);/;Via Giuseppe De Falco;7;81100;Caserta;Italie;www.aslcaserta.it;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);Central Remedial Clinic;;Vernon Avenue ;/;/;Dublin;Ireland;https://www.crc.ie/;;
+MEDI;Hôpital;Ingénierie & technologie (impression 3D);ESAAC;/;Avda. Blasco Ibáñez;21;46010;Valencia;Espagne;http://www.esaac.es/ ;;
+ENAB;Réseau d’innovation / Collectivité;Ingénierie & technologie (impression 3D);Scuola universitaria professionale della Svizzera italiana (SUPSI);/;Via Pobiette;11;6928;MANNO;Suisse;Scuola universitaria professionale della Svizzera italiana - SUPSI;44,629398;10,948271
+PRSC;Université;Ingénierie & technologie (impression 3D);UNIMORE;/; Via Pietro Vivarelli ;10;41125;Modena;Italie;Home page | Università degli Studi di Modena e Reggio Emilia;;

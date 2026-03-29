@@ -1,0 +1,27 @@
+CONFIGURATION FILE
+
+AREA NAME : Region INTERREG
+AREA FRANCE : Nord, Pas-de-Calais, Aisne, Ardennes, Somme, Oise
+AREA WALLONIE : Virton,Bastogne,Neufchâteau,Dinant,Marche-en-Famenne, Namur, Thuin, Philippeville, Charleroi, La Louvière, Mons, Zinnik, Ath, Doornik-Moeskroen
+AREA VLAANDEREN : West-Vlaanderen,Oost-Vlaanderen, Gent, Tielt, Oudenaarde, Kortrijk, Roeselare, Ieper, Diksmuide, Veurne, Oostende, Brugge
+COLOR FRANCE : (32,32,32)
+COLOR WALLONIE : (96,96,96)
+COLOR VLAANDEREN : (160,160,160)
+
+POINT NAME : Points d'intérêts
+CATEGORY : MEDI,Médical,(255;0;0),circle
+CATEGORY : PRSC,Recherche,(255;255;0),square
+CATEGORY : PRIV,Entreprise,(0;0;255),square
+CATEGORY : CITZ,Société civile,(0;255;0),square
+CATEGORY : ENAB,Facilitateur,(0;255;0),circle
+
+
+CLUSTER NAME : Groupement
+
+THRESHHOLD KM ONE : 20
+COLOR GROUPE ONE : (76, 0, 153)
+IMPACT FACTOR ONE : 40
+
+THRESHHOLD KM TWO : 50
+COLOR GROUPE TWO : (0, 102, 204)
+IMPACT FACTOR TWO : 40
