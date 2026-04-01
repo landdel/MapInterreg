@@ -16,18 +16,18 @@ except ImportError:
 
 
 
-# Charger les donnÃ©es depuis le fichier CSV
+# Charger les données depuis le fichier CSV
 file_path = "locations.csv"  # Chemin du fichier CSV
 data = pd.read_csv(file_path, delimiter=';', skipinitialspace=True, dtype=str, engine='python',encoding="utf-8")
 data["latitude"] = pd.to_numeric(data["latitude"], errors='coerce')
 data["longitude"] = pd.to_numeric(data["longitude"], errors='coerce')
 
 
-# Supprimer les entrÃ©es avec des valeurs non numÃ©riques dans les colonnes latitude et longitude
+# Supprimer les entrées avec des valeurs non numériques dans les colonnes latitude et longitude
 data = data[pd.to_numeric(data["latitude"], errors='coerce').notna() & pd.to_numeric(data["longitude"], errors='coerce').notna()]
 config_file_path = "CONFIG.txt"
 
-# Charger les fichiers GeoJSON pour les dÃ©partements franÃ§ais et provinces belges
+# Charger les fichiers GeoJSON pour les départements français et provinces belges
 with open(Path('zone') / 'FR_Departements.geojson', 'r', encoding='utf-8') as f:
     france_geojson = json.load(f)
 with open(Path('zone') / 'BE_Arrondissements.geojson', 'r', encoding='utf-8') as f:

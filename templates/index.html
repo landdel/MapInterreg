@@ -65,7 +65,9 @@
       </p>
       {% if latest_map %}
         <p><a href="{{ url_for('serve_result', filename=latest_map) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
-        <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map) }}"></iframe>
+        <div class="map-wrapper">
+          <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map) }}"></iframe>
+        </div>
       {% else %}
         <p>Aucune carte trouvee dans le dossier <code>result/</code>.</p>
       {% endif %}
