@@ -234,18 +234,13 @@ pre {
 }
 
 /* ── Résultat / carte générée ── */
-.map-wrapper {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  margin-top: 10px;
-  background: #fff;
-}
-
 iframe {
   width: 100%;
   min-height: 620px;
-  border: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  margin-top: 10px;
   display: block;
 }
 
