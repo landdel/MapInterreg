@@ -1,11 +1,12 @@
 import folium
 import pandas as pd
 import json
+import shutil
 from folium.plugins import MarkerCluster
 import datetime
 import numpy as np
 from sklearn.cluster import DBSCAN
-from html import escape  # Permet d'Ã©chapper correctement les caractÃ¨res spÃ©ciaux
+from html import escape  # Permet d'échapper correctement les caractères spéciaux pour l'affichage HTML
 import branca
 from pathlib import Path
 
@@ -387,15 +388,17 @@ grouped_points_layer_2.add_to(m)
 folium.LayerControl().add_to(m)
 
 original_filename = 'result/map'
+latest_filename = 'result/map_latest.html'
 
 # Générer le timecode au format désiré
-timecode = datetime.datetime.now().strftime("%Y%m%d_%H%M")
+timecode = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
 # Ajouter le timecode au nom du fichier
 filename_with_timecode = original_filename+"_"+timecode+".html"
 
 # Sauvegarder la carte dans un fichier HTML
 m.save(filename_with_timecode)
+shutil.copyfile(filename_with_timecode, latest_filename)
 
 print("Fichier enregistrÃ© avec le nom :", filename_with_timecode)
-
+print("Derniere carte mise a jour :", latest_filename)

@@ -61,9 +61,11 @@ def index():
                 execution_results.append(run_python_script("mapping.py"))
 
     latest_map = find_latest_map()
+    latest_map_version = int(latest_map.stat().st_mtime) if latest_map else None
     return render_template(
         "index.html",
         latest_map=latest_map.name if latest_map else None,
+        latest_map_version=latest_map_version,
         locations_exists=LOCATIONS_FILE.exists(),
         execution_results=execution_results,
     )

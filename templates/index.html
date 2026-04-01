@@ -60,13 +60,13 @@
         {% if locations_exists %}
           <a href="{{ url_for('download_locations') }}">Telecharger locations.csv</a>
         {% else %}
-          <span>locations.csv non genere pour l'instant</span>
+          <span>locations.csv non généré pour l'instant</span>
         {% endif %}
       </p>
       {% if latest_map %}
-        <p><a href="{{ url_for('serve_result', filename=latest_map) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
+        <p><a href="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
         <div class="map-wrapper">
-          <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map) }}"></iframe>
+          <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}"></iframe>
         </div>
       {% else %}
         <p>Aucune carte trouvee dans le dossier <code>result/</code>.</p>
