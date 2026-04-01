@@ -14,6 +14,24 @@ LOCATIONS_FILE = BASE_DIR / "locations.csv"
 app = Flask(__name__)
 
 
+def save_uploaded_csv(uploaded_file, destination: Path) -> None:
+    raw_bytes = uploaded_file.read()
+    encodings = ("utf-8", "utf-8-sig", "cp1252", "latin-1")
+    decoded_text = None
+
+    for encoding in encodings:
+        try:
+            decoded_text = raw_bytes.decode(encoding)
+            break
+        except UnicodeDecodeError:
+            continue
+
+    if decoded_text is None:
+        raise UnicodeDecodeError("unknown", raw_bytes, 0, len(raw_bytes), "Impossible de decoder le CSV")
+
+    destination.write_text(decoded_text, encoding="utf-8")
+
+
 def run_python_script(script_name: str) -> dict:
     script_path = BASE_DIR / script_name
     completed = subprocess.run(
@@ -57,7 +75,7 @@ def index():
         if action == "upload_csv":
             uploaded_file = request.files.get("csv_file")
             if uploaded_file and uploaded_file.filename:
-                uploaded_file.save(LOCATIONS_FILE)
+                save_uploaded_csv(uploaded_file, LOCATIONS_FILE)
                 execution_results.append(
                     {
                         "script": "upload_csv",

@@ -16,10 +16,31 @@ except ImportError:
     JsButton = None
 
 
+def read_csv_with_fallbacks(file_path, **kwargs):
+    encodings = ["utf-8", "utf-8-sig", "cp1252", "latin-1"]
+    last_error = None
+
+    for encoding in encodings:
+        try:
+            return pd.read_csv(file_path, encoding=encoding, **kwargs)
+        except UnicodeDecodeError as exc:
+            last_error = exc
+
+    if last_error is not None:
+        raise last_error
+
+    raise RuntimeError(f"Impossible de lire le fichier CSV: {file_path}")
+
 
 # Charger les données depuis le fichier CSV
 file_path = "locations.csv"  # Chemin du fichier CSV
-data = pd.read_csv(file_path, delimiter=';', skipinitialspace=True, dtype=str, engine='python',encoding="utf-8")
+data = read_csv_with_fallbacks(
+    file_path,
+    delimiter=';',
+    skipinitialspace=True,
+    dtype=str,
+    engine='python',
+)
 data["latitude"] = pd.to_numeric(data["latitude"], errors='coerce')
 data["longitude"] = pd.to_numeric(data["longitude"], errors='coerce')
 
