@@ -1,0 +1,7 @@
+flask
+folium
+pandas
+numpy
+scikit-learn
+branca
+requests

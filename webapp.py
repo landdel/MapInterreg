@@ -47,7 +47,6 @@ def find_latest_map() -> Optional[Path]:
 @app.route("/", methods=["GET", "POST"])
 def index():
     execution_results = []
-    upload_message = None
 
     if request.method == "POST":
         action = request.form.get("action", "").strip().lower()
@@ -60,13 +59,6 @@ def index():
             execution_results.append(run_python_script("coordinates.py"))
             if execution_results[-1]["ok"]:
                 execution_results.append(run_python_script("mapping.py"))
-        elif action == "upload":
-            uploaded_file = request.files.get("addresses_file")
-            if uploaded_file and uploaded_file.filename:
-                ADDRESSES_FILE.write_bytes(uploaded_file.read())
-                upload_message = "adresses.csv a ete remplace avec succes."
-            else:
-                upload_message = "Aucun fichier selectionne."
 
     latest_map = find_latest_map()
     return render_template(
@@ -74,7 +66,6 @@ def index():
         latest_map=latest_map.name if latest_map else None,
         locations_exists=LOCATIONS_FILE.exists(),
         execution_results=execution_results,
-        upload_message=upload_message,
     )
 
 
@@ -88,14 +79,14 @@ def download_latest_map():
     latest_map = find_latest_map()
     if latest_map is None:
         abort(404, description="Aucune carte generee.")
-    return send_file(latest_map, as_attachment=True, attachment_filename=latest_map.name)
+    return send_file(latest_map, as_attachment=True, download_name=latest_map.name)
 
 
 @app.route("/download/locations")
 def download_locations():
     if not LOCATIONS_FILE.exists():
         abort(404, description="Le fichier locations.csv est introuvable.")
-    return send_file(LOCATIONS_FILE, as_attachment=True, attachment_filename="locations.csv")
+    return send_file(LOCATIONS_FILE, as_attachment=True, download_name="locations.csv")
 
 
 if __name__ == "__main__":

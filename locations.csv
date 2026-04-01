@@ -1,0 +1,131 @@
+latitude;longitude;category;type;name;acronym;url
+50.4196821;4.4952503;MEDI;Hôpital;Grand Hôpital de Charleroi;Ghdc;https://www.ghdc.be/
+50.477495;4.204887;MEDI;Hôpital;CHU Tivoli;/;https://chu-tivoli.be/
+50.8342232;4.3472462;MEDI;Hôpital;Hôpital Saint-Pierre Bruxelles;???;https://www.stpierre-bru.be/
+50.8522922;4.4518697;MEDI;Hôpital;Cliniques Universitaires Saint-Luc;CUSL;https://www.saintluc.be/fr
+50.6736258;5.5482376;PRIV;Entreprise (<250 personnes);Apex Orthopédie sel;Apex Orthopédie ;https://apexorthopedie.be/
+43.595269;3.079825;MEDI;Hôpital;Clinique du Dr STER ;STER;http://www.cliniques-ster.com/lamalou-les-bains/accueil/
+50.8522922;4.4518697;MEDI;Hôpital;Cliniques Universitaires Saint Luc;CUSL;https://www.saintluc.be/
+50.477495;4.204887;MEDI;Hôpital;CHU Tivoli;Tivoli;https://www.chu-tivoli.be/
+50.4196821;4.4952503;MEDI;Hôpital;Grand hôpital de Charleroi;GHDC;https://www.ghdc.be/
+48.8481141;2.3029716;PRIV;Entreprise (<250 personnes);Bone3D;/;http://www.bone3d.fr/
+44.7846005;-0.631603;PRIV;Entreprise (<250 personnes);Poietis;/;https://www.poietis.com/
+50.6072219;3.0372193;PRIV;Entreprise (<250 personnes);Lattice Medical;/;https://www.lattice-medical.com/
+43.5526941;1.4537133;PRIV;Entreprise (<250 personnes);AnatomikModeling;/;https://www.anatomikmodeling.com/fr
+48.837644;2.365013;MEDI;Hôpital;AP-HP (PRIM3D);PRIM3D;https://www.aphp.fr/
+43.2908868;5.3939207;MEDI;Hôpital;AP-HM (Marseille);AP-HM;https://ap-hm.fr/
+50.8525411;4.7340697;PRIV;Entreprise (?250 personnes);Materialise;/;https://www.materialise.com/en
+50.5923296;5.5595569;PRIV;Entreprise (<250 personnes);CERHUM;/;https://cerhum.com/
+50.6666526;4.625606;PRIV;Entreprise (<250 personnes);3D-Side;/;https://www.3d-side.com/
+50.8798721;4.6737961;MEDI;Hôpital;UZ Leuven – 3D Core Facility;/;https://www.uzleuven.be/
+51.023089;3.723135;MEDI;Hôpital;UZ Gent – 3D Lab;/;https://uzgent.be/
+50.9854539;5.7884805;PRIV;Entreprise (<250 personnes);Xilloc;/;https://www.xilloc.com/
+51.4392648;5.478633;PRIV;Entreprise (<250 personnes);3D Medical Models;/;https://www.3dmedicalmodels.nl/
+52.0862941;5.1799371;MEDI;Hôpital;UMC Utrecht – 3D Lab;/;https://umcutrecht.nl/
+51.8227627;5.8622342;MEDI;Hôpital;Radboudumc – 3D Lab;/;https://www.radboudumc.nl/
+53.2232991;6.5738651;MEDI;Hôpital;UMC Groningen – 3D Lab;/;https://www.umcg.nl/
+50.6131022;3.0364548;MEDI;Hôpital;Centre hospitalier universitaire de Lille;CHU Lille;https://www.chu-lille.fr/
+50.5069752;4.2654081;PRSC;Centre de recherche;CEntre de Ressources TEchnologiques en Chimie;Certech;https://www.certech.be/
+50.4587129;3.9522476;PRSC;Université;Université de Mons;UMONS;https://web.umons.ac.be/
+51.0471689;3.7282075;PRSC;Université;Universiteit Gent;UGent;https://www.ugent.be/
+51.0235356;3.726631;MEDI;Hôpital universitaire;Universitair Ziekenhuis Gent;UZ Gent;https://uzgent.be/
+50.8057594;3.2843834;PRSC;Université;VIVES Zuid vzw;/;https://www.vives.be/
+50.6313271;3.0746827;PRSC;Université;Université de Lille;/;https://www.univ-lille.fr/
+50.607523;3.133407;PRSC;Université;Centrale Lille;/;https://centralelille.fr/
+50.605379;3.025115;ENAB;Réseau d’innovation / Collectivité;Eurasanté;/;eurasante.com
+50.6092268;3.1408915;PRSC;Centre de recherche;Centre National de la Recherche Scientifique;CNRS;https://www.cnrs.fr/
+50.797406;2.176279;PRIV;Entreprise (<250 personnes);3D Metal Print;3D-MP;https://www.3d-metalprint.com/
+50.6018037;3.0434143;PRIV;Entreprise (<250 personnes);Prothexpert;/;https://www.prothexpert.com/
+50.4434316;3.8664252;PRIV;Entreprise (<250 personnes);NK Dental;/;http://nkdental.be/
+43.2920671;5.4017137;MEDI;Hôpital;AP-HM – Hôpital de la Timone (Pôle odontologie);AP-HM;http://ap-hm.fr/service/pole-odontologie-batiment-5-hopital-de-la-timone
+43.2920671;5.4017137;MEDI;Hôpital;CHU Marseille – Service de prothèses dentaires 3D;/;https://ap-hm.fr/
+50.4457358;3.9564333;PRSC;Centre de recherche;Gmake;/;https://web.umons.ac.be/gmec/gmake/
+50.5323126;5.5779808;ENAB;Réseau d’innovation / Collectivité;CIHA ASBL / KapLab;/;https://www.kaplab.be/
+41.4012153;2.1931628;ENAB;Réseau d’innovation / Collectivité;Fundació iSocial;/;https://isocial.cat/
+47.702484;-3.419676;MEDI;Hôpital;REHAB-LAB Kerpape - CMRRF Kerpape;/;https://novap.fehap.fr/candidats/rehab-lab-lieu-unique-a-kerpape/
+48.546269;-2.725775;ENAB;Réseau d’innovation / Collectivité;ALTYLAB - ALTYGO - Pôle Enfant;/;altylab@altygo.org
+41.6220733;0.6292948;ENAB;Réseau d’innovation / Collectivité;ASPID Lleida - Fablab;/;https://aspid.cat/ca/ 
+48.5450903;7.7651965;ENAB;Réseau d’innovation / Collectivité;Adèl'LAB;/;https://www.glaubitz.fr/ 
+41.721166;1.837462;CITZ;Réseau d’innovation / Collectivité;Ampans REHAB-LAB - Ampans;/;https://ampans.cat
+41.610326;1.143042;CITZ;Réseau d’innovation / Collectivité;Associació Alba;/;https://aalba.cat/
+47.2634563;-2.2682715;MEDI;Hôpital;CMPR Côte d'Amour;/;https://kap-ouest.fr/centre-cote-damour/
+48.750335;2.465014;PRSC;Centre de recherche;Centre de Recherche IRMA - Institut Robert Merle d'Aubigné;/;http://www.irma-valenton.fr/
+41.366646;2.159556;CITZ;Réseau d’innovation / Collectivité;Crea 3D - Fundació ASPACE Catalunya;/;https://aspace.cat/es/ 
+43.087093;6.117637;ENAB;Réseau d’innovation / Collectivité;Ergo Fabriq;/;https://www.leonberard.com/actualites/dernieres-actualites/fab-lab-hopital-leon-berard--ergo-fabriq
+48.882518;2.278227;ENAB;Réseau d’innovation / Collectivité;Ergothérapie - Rehab lab Michel Arthuis;/;https://www.association-notre-dame.org/#/ 
+41.55683;2.451549;CITZ;Réseau d’innovation / Collectivité;Fundacio Maresme;/;https://www.fundaciomaresme.cat/
+41.1167842;1.2053436;CITZ;Réseau d’innovation / Collectivité;Fundació Onada;/;https://www.fundacioonada.org/
+41.9650214;2.8273189;CITZ;Réseau d’innovation / Collectivité;Fundació Ramon Noguera;/;https://grupfrn.cat/
+46.3427373;-0.4817177;ENAB;Réseau d’innovation / Collectivité;Lab' Tech Melioris;/;https://www.melioris-association.fr/
+44.8667722;0.3803674;ENAB;Réseau d’innovation / Collectivité;Laboratoire Autonomie et Communication - Fondation John Bost;/;https://www.johnbost.org/innovation/labo-autocom/
+48.172339;16.344873;PRSC;Centre de recherche;REHAB-LAB - AUVA RZ Meidling;/;https://auva.at/gesundheitseinrichtungen/rz-meidling/ 
+48.1227318;-1.6381636;MEDI;Hôpital;REHAB-LAB Beaulieu - Clinique FSEF Rennes Beaulieu;/;https://www.fsef.net/etablissements/clinique-fsef-rennes-beaulieu 
+50.4088253;1.5610645;MEDI;Hôpital;REHAB-LAB Calvé - Centre J.Calvé;/;http://www.fondation-hopale.org/ (dans un nouvel onglet)
+49.0472331;2.2962527;ENAB;Réseau d’innovation / Collectivité;Clinique FSEF de Bouffémont;/;https://fsef-sante-etudes.fr/
+48.7143034;-4.0076743;MEDI;Hôpital;REHAB-LAB Ildys - Fondation ILDYS - Centre de Rééducation de Perharidy;/;https://www.facebook.com/rehablab.ildys.9/ 
+45.2061781;5.7493311;MEDI;Hôpital;REHAB-LAB Inté-Gré - Clinique FSEF GRENOBLE LA TRONCHE;/;http://www.fsef.net/index.php/138-etablissements/clinique-du-gresivaudan 
+44.8835318;-0.6245773;MEDI;Hôpital;REHAB-LAB La Tour de Gassies - La Tour de Gassies - CMPR et CRPS;/;https://www.groupe-ugecam.fr/centre-de-la-tour-de-gassies 
+47.4311546;-0.762303;MEDI;Hôpital;REHAB-LAB Myonov;/;/
+47.434382;0.644794;ENAB;Réseau d’innovation / Collectivité;SMR - BEL AIR REHAB-LAB - Croix-rouge;/;https://www.belair-crf.com/ (dans un nouvel onglet)
+48.0628449;0.1641895;MEDI;Hôpital;Service Ergothérapie - REHAB-LAB Centre de l'Arche;/;https://asso-prh.fr/centre-de-larche-2/ (dans un nouvel onglet)
+49.9251661;5.3797256;ENAB;Réseau d’innovation / Collectivité;Vivalia - CIHA / Kaplab;/;https://www.vivalia.be/
+48.3982989;-4.5313705;ENAB;Réseau d’innovation / Collectivité;WPRINT - CHU Brest;/;https://www.chu-brest.fr/centre-dinnovation-winn 
+46.9195719;3.2744473;ENAB;Réseau d’innovation / Collectivité;makeLab Imphy - FAM - APF Imphy;/;https://www.facebook.com/makeLabImphy/
+48.119255;-1.651124;CITZ;Réseau d’innovation / Collectivité;3D'Achon Lab - Foyer Guillaume d'Achon - APF 35;/;/
+47.037747;3.187886;CITZ;Réseau d’innovation / Collectivité;ADAPEI 58;/;https://www.adapei58.org/ 
+43.8326698;4.3379629;CITZ;Réseau d’innovation / Collectivité;ARAMAV;/;https://aramav.fr/ (dans un nouvel onglet)
+41.720279;1.839044;ENAB;Réseau d’innovation / Collectivité;Althaia, Xarxa Assistencial Universitària Manresa;/;https://www.althaia.cat/
+48.82025;2.423432;PRSC;Université;CENoTe - HPEVM;/;/
+49.0285052;1.9788654;MEDI;Hôpital;CHRRF La Châtaigneraie;/;https://lachataigneraie.fr/menucourt/ 
+47.665359;-2.747782;ENAB;Réseau d’innovation / Collectivité;Centre Hospitalier Bretagne Atlantique;/;https://www.ch-bretagne-atlantique.fr/
+48.67531;2.7008339;MEDI;Hôpital;Centre de Réadaptation de Coubert;/;https://www.groupe-ugecam.fr/cr-coubert
+48.9063528;2.462797;MEDI;Hôpital;Centre de médecine physique et de réadaptation (CMPR) COS - COS CMPR (Bobigny);/;https://www.fondationcos.org/centre-de-medecine-physique-et-de-readaptation-cmpr-cos
+44.3361563;4.8629712;MEDI;Hôpital;Concept Lab 3D;/;/
+48.3905283;-4.4860088;ENAB;Réseau d’innovation / Collectivité;EHPAD René Fortin - Le Rehab-lab de René;/;https://www.chu-brest.fr/ehpad-centre-rene-fortin-bohars 
+47.1854652;-1.5240499;MEDI;Hôpital;ESEAN Lab - ESEAN - APF Nantes;/;ESEAN | Association APF France handicap
+47.7400441;-3.3924635;CITZ;Réseau d’innovation / Collectivité;Equipe&Moi 56 - REHAB-LAB Equipe&Moi 56;/;https://bretagne.vyv3.fr/nos-activites/equipe-moi-mon-quotidien-adapte
+48.4563949;-1.4804014;ENAB;Réseau d’innovation / Collectivité;Ergo - Centre Hospitalier des Marches de Bretagne;/;https://www.chmarchesdebretagne.fr/ 
+46.6920746;-1.9414719;MEDI;Hôpital;Ergo - Villa Notre Dame;/;https://www.villa-notre-dame.fr/
+50.1789642;3.2556785;ENAB;Réseau d’innovation / Collectivité;Ergothérapie - LADAPT HAUTS-DE-FRANCE;/;/
+41.416024;2.181226;ENAB;Réseau d’innovation / Collectivité;Esclatec (Associació Esclat);/;/
+43.9389095;4.7982675;CITZ;Réseau d’innovation / Collectivité;FAM APF Terro Flourido;/;https://annuaire.action-sociale.org/?p=foyer-d-accueil-medicalise--terro-flourido--840015259&details=caracteristiques
+48.8267883;2.3200251;CITZ;Réseau d’innovation / Collectivité;FAM Sainte-Geneviève - FAM Sainte Geneviève;/;https://www.ndbs.org/etablissements/foyer-daccueil-medicalise-fam-saint-genevieve/
+48.7127728;6.160614;ENAB;Réseau d’innovation / Collectivité;FabLab Les MacGyver;/;https://fablablesmacgyver.jbthiery.asso.fr/ (dans un nouvel onglet)
+48.4557004;1.4702028;ENAB;Réseau d’innovation / Collectivité;Foyer Bourgarel APF France handicap;/;https://pole-28.apf-francehandicap.org/residence-jacques-bourgarel
+41.9921187;2.8132042;CITZ;Réseau d’innovation / Collectivité;Fundació privada Mifas;/;https://www.mifas.cat/
+41.4779133;2.2382043;CITZ;Réseau d’innovation / Collectivité;Guttmann REHAB-LAB - Institut Guttmann;/;https://www.guttmann.com 
+43.5241238;3.9234877;ENAB;Centre de recherche;Humanlab Saint-Pierre - Institut St-Pierre;/;https://www.humanlabsaintpierre.org/ 
+45.7608912;4.8314688;ENAB;Centre de recherche;Hôpital Henry Gabrielle - Hospices Civils de Lyon - CHU;/;https://www.chu-lyon.fr/hopital-henry-gabrielle 
+51.062895;2.4823033;MEDI;Hôpital universitaire;Hôpital Maritime Zuydcoote;/;https://www.ch-zuydcoote.fr/ 
+43.643589;3.832578;MEDI;Hôpital;I3D Propara - CMN PROPARA;/;https://propara.fr/ 
+43.2854601;5.481059;ENAB;Réseau d’innovation / Collectivité;Icom'provence;/;https://icomprovence.net/ 
+47.999045;2.770721;MEDI;Hôpital;LADAPT LOIRET ESMR ERGO - ESMR LADAPT LOIRET;/;https://www.ladapt.net/etablissement-service-centre-val-de-loire-loiret 
+45.463524;0.854386;MEDI;Hôpital;MPR - CHU Martinique;/;https://www.chu-martinique.fr/ (dans un nouvel onglet)
+48.8252016;1.6343659;MEDI;Hôpital universitaire;PMPR ergothérapie - Fondation Mallet;/;https://www.fondationmallet.fr/ (dans un nouvel onglet)
+47.9869575;-4.0901539;MEDI;Hôpital;Pole Keraman APF France Handicap;/;Association APF France handicap
+47.576923;6.756391;CITZ;Réseau d’innovation / Collectivité;Pôle Santé - CMPR Bretegnier;/;CMPR Bretegnier - Pôle santé - Fondation Arc-en-ciel
+45.8847264;1.2427238;MEDI;Hôpital;R3aDapt'lab - IEM - APF Limoges 87;/;https://www.iem87apffrancehandicap.com/
+47.730771;-3.477547;CITZ;Réseau d’innovation / Collectivité;"REHAB-LAB ""I-LABO"" - IEM OLBIA";/;/
+47.7333001;-3.4980653;ENAB;Réseau d’innovation / Collectivité;REHAB-LAB - Labo des possibles;/;https://www.crscopoly.com/labo-des-possibles-scopoly 
+43.7231535;7.2840505;ENAB;Réseau d’innovation / Collectivité;REHAB-LAB CIUS Nice - Centre d'Innovation et d'Usages en Santé;/;Home | CIUS
+48.8384477;2.171318;ENAB;Réseau d’innovation / Collectivité;REHAB-LAB Garches - CHU Garches;/;https://raymondpoincare.aphp.fr/ 
+49.316209;2.449778;MEDI;Hôpital universitaire;REHAB-LAB Institut Universitaire de Réadaptation Clémenceau - IURC;/;Pôle IURC site de Strasbourg à STRASBOURG | GROUPE UGECAM
+49.3132496;2.44923;PRSC;Centre de recherche;REHAB-LAB Mini-Makers Cauffry - Pôle enfance SEM - APF Cauffry;/;SEM Cauffry - APF France handicap - Taxe Apprentissage
+49.4048606;2.8070725;CITZ;Réseau d’innovation / Collectivité;REHAB-LAB Mini-Makers Compiègne - Pôle enfance SESSAD - APF Compiègne;/;Association APF France handicap
+42.675892;9.436851;CITZ;Réseau d’innovation / Collectivité;REHAB-LAB Richelieu - CRF Richelieu - Croix rouge;/;Centre Richelieu - Croix Rouge Française - La Rochelle (17) - Charente-Maritime
+42.6799626;9.42796;MEDI;Hôpital;REHAB-LAB SAVS APF Cismonte - SAVS - APF Cismonte;/;Savs apf cismonte - Savs apf cismonte - Bastia | Santé.fr
+49.628329;6.174273;CITZ;Réseau d’innovation / Collectivité;REHAB-LAB Toulouse Lautrec - SESSAD - EREA Toulouse Lautrec;/;Sessad erea toulouse lautrec pep 92 | Santé.fr
+49.6277021;6.1714722;ENAB;Réseau d’innovation / Collectivité;REHAZENTER;/;Accueil - Rehazenter
+44.354415;25.9590541;ENAB;Réseau d’innovation / Collectivité;Rehab Lab Motivation - 3D assistive devices for wheelchair users - Motivation Romania Foundation;/;https://www.motivation.ro/en (dans un nouvel onglet)
+45.1778415;5.7611;CITZ;Réseau d’innovation / Collectivité;Rehab-Lab - centre médical Rocheplane;/;http://www.rocheplane.org/ (dans un nouvel onglet)
+50.8631502;4.377666;ENAB;Réseau d’innovation / Collectivité;RéCI Bruxelles - RéCI;/;https://www.reci-bruxelles.be/ 
+48.4325019;1.5060141;ENAB;Réseau d’innovation / Collectivité;SAMSAH APF France handicap Chartres;/;https://taxe-apprentissage.apf-francehandicap.org/structure/sessad-chartres/
+48.4304893;-4.4628258;CITZ;Réseau d’innovation / Collectivité;SESSAD Finistère - APF 29;/;https://sessadapf29.weebly.com/ 
+28.3780464;83.9999901;CITZ;Réseau d’innovation / Collectivité;SIRC Nepal - SIRC Rehab-Lab;/;https://www.sirc.org.np/ 
+43.926309;2.131795;CITZ;Réseau d’innovation / Collectivité;Service d'Ergothérapie - PÔLE DE RÉADAPTATION DE CORNOUAILLE;/;Pôle de Réadaptation de Cornouaille - Concarneau à CONCARNEAU | GROUPE UGECAM
+47.350578;1.155357;MEDI;Hôpital;Service d'ergothérapie - REHAB-LAB CRMF ALBI VYV3;/;https://www.facebook.com/CMRF.Albi/ 
+47.3508462;1.1564704;ENAB;Réseau d’innovation / Collectivité;Service d'ergothérapie - SMR de la Menaudière;/;https://proximite.mgen.fr/212-etablissement-smr-de-la-menaudiere 
+47.9647351;0.2219112;MEDI;Hôpital;Service d'ergothérapie - SOSAN SMR;/;https://www.sosan.fr/soins-medicaux-et-de-readaptation/ (dans un nouvel onglet)
+45.8187833;1.2471594;MEDI;Hôpital;Service de Réadaptation Visuelle - Hôpital de Jour Baudin - Limoges;/;https://www.mutualitelimousine.fr/hospitalisation-readaptation/hopital-de-jour-baudin 
+49.4986599;0.1124635;MEDI;Hôpital;Service de médecine physique et de réadaptation - Groupe Hospitalier du Havre;/;Accueil – Groupe Hospitalier du Havre - Groupe Hospitalier du Havre
+46.064571;11.2491669;MEDI;Hôpital;Villa Rosa Rehab-Lab - Rehabilitation Hospital - Villa Rosa;/;https://www.apss.tn.it/Azienda/Unita-operative-e-strutture/Unita-operativa-riabilitazione-ospedaliera-Villa-Rosa (dans un nouvel onglet)

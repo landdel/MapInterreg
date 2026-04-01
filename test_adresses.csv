@@ -1,0 +1,13 @@
+category;type;field;name;acronym;street;postnumber;zipcode;city;country;url;Latitude;Longitude
+MEDI;Hôpital;Médecine;CHU de Lille;CHUL;Rue Michel Polonowski;1;59037;Lille;France;https://www.chu-lille.fr/;50.6097;3.0443
+MEDI;Hôpital;Médecine;CHU de Charleroi;CHUC;Boulevard Zoé Drion;1;6000;Charleroi;Belgique;https://www.chu-charleroi.be/;50.4108;4.4446
+EDUC;Université;Recherche;Université de Lille;ULille;42 Rue Paul Duez;42;59000;Lille;France;https://www.univ-lille.fr/;50.6292;3.0573
+EDUC;Université;Recherche;Université de Mons;UMONS;Place du Parc;20;7000;Mons;Belgique;https://www.umons.ac.be/;50.4542;3.9523
+EDUC;Université;Recherche;Université de Namur;UNamur;Rue de Bruxelles;61;5000;Namur;Belgique;https://www.unamur.be/;50.4669;4.8674
+INNO;Centre de recherche;Innovation;Inria Lille;Inria;Parc Scientifique de la Haute Borne;40;59650;Villeneuve-d'Ascq;France;https://www.inria.fr/fr/centre-inria-lille-nord-europe;50.6083;3.1389
+INNO;Incubateur;Innovation;Euratechnologies;EuraTech;Rue de Quesnoy;165;59000;Lille;France;https://www.euratechnologies.com/;50.6456;3.0347
+MEDI;Clinique;Médecine;Clinique Saint-Luc Bouge;CSL;Rue Saint-Luc;9;5004;Namur;Belgique;https://www.saintlucnamur.be/;50.4872;4.8956
+EDUC;École;Formation;Haute École de Namur-Liège-Luxembourg;HENALLUX;Rue Saint-Donat;130;5002;Saint-Servais;Belgique;https://www.henallux.be/;50.4778;4.8534
+INNO;Parc scientifique;Innovation;Axis Parc;AxisParc;Rue Emile Francqui;1;1435;Mont-Saint-Guibert;Belgique;https://www.axisparc.be/;50.5851;4.6102
+MEDI;Hôpital;Médecine;Centre Hospitalier de Valenciennes;CHV;Avenue Désandrouin;1;59322;Valenciennes;France;https://www.ch-valenciennes.fr/;;
+EDUC;Université;Recherche;Université Polytechnique Hauts-de-France;UPHF;Mont Houy;8;59313;Valenciennes;France;https://www.uphf.fr/;;

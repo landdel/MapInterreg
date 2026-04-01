@@ -125,6 +125,18 @@ a {
   color: var(--muted);
 }
 
+#csv-map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 12px;
+  display: none;
+}
+
+.csv-ok    { color: var(--ok);    font-size: 14px; margin: 6px 0 0; }
+.csv-error { color: var(--error); font-size: 14px; margin: 6px 0 0; }
+
 @media (max-width: 700px) {
   iframe {
     min-height: 430px;
