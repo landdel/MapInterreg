@@ -2,12 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=http://127.0.0.1:5000/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MapInterreg</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
-  <p>Cette page statique ne gere pas l'upload et la regeneration des cartes.</p>
-  <p>Ouvrez l'application Flask ici : <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a></p>
+  <main class="container">
+    <h1>MapInterreg</h1>
+    <p class="subtitle">Version statique pour consultation et téléchargement des fichiers générés.</p>
+
+    <section class="result">
+      <h2 style="font-size: larger; background-color: rgb(135, 190, 249); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Consultation</h2>
+      <p>Cette page n'exécute pas les scripts Python. Elle permet seulement d'ouvrir les fichiers déjà présents dans le dépôt ou publiés avec le site.</p>
+      <p class="download-links">
+        <a href="result/map_latest.html">Ouvrir map_latest.html</a>
+        <a href="result/map_latest.html" download>Télécharger la carte</a>
+        <a href="locations.csv" download>Télécharger locations.csv</a>
+      </p>
+    </section>
+
+    <section class="result" id="generated-maps">
+      <h2 style="font-size: larger; background-color: rgb(135, 190, 249); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Dernière carte disponible</h2>
+      <p><a href="result/map_latest.html" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
+      <div class="map-wrapper">
+        <iframe title="Carte" src="result/map_latest.html"></iframe>
+      </div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="static/script.js"></script>
 </body>
 </html>
