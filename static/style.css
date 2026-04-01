@@ -244,6 +244,14 @@ iframe {
   display: block;
 }
 
+#generated-maps h3 + p {
+  margin-top: 10px;
+}
+
+#generated-maps .map-wrapper + h3 {
+  margin-top: 24px;
+}
+
 /* ── Liens de téléchargement ── */
 .download-links {
   display: flex;

@@ -25,7 +25,7 @@
     </section>
 
     <section class="result">
-      <h2>Charger et visualiser un CSV</h2>
+      <h2>Charger un CSV</h2>
       <form method="post" enctype="multipart/form-data" class="upload-form">
         <input type="hidden" name="action" value="upload_csv">
         <label class="file-label">
@@ -35,7 +35,7 @@
         <button type="submit">Charger ce CSV et regenerer la carte</button>
       </form>
       <p id="csv-status"></p>
-      <div id="csv-map"></div>
+      <p>Le fichier charge est utilise pour regenerer la carte Folium ci-dessous, avec ses couleurs et sa legende.</p>
     </section>
 
     {% if execution_results %}
@@ -55,8 +55,8 @@
       </section>
     {% endif %}
 
-    <section class="result">
-      <h2>Cartes generees</h2>
+    <section class="result" id="generated-maps">
+      <h2 style="font-size: larger; background-color: rgb(135, 190, 249); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Cartes générées</h2>
       <p class="download-links">
         <a href="{{ url_for('download_latest_map') }}">Telecharger la carte</a>
         {% if locations_exists %}
@@ -67,19 +67,19 @@
       </p>
 
       {% if previous_map and newly_generated_map %}
-        <h3>Carte precedente</h3>
+        <h3 style="font-size: large; background-color: rgb(162, 200, 241); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Carte précédente</h3>
         <p><a href="{{ url_for('serve_result', filename=previous_map, v=previous_map_version) }}" target="_blank" rel="noopener">Ouvrir l'ancienne carte dans un nouvel onglet</a></p>
         <div class="map-wrapper">
           <iframe title="Carte precedente" src="{{ url_for('serve_result', filename=previous_map, v=previous_map_version) }}"></iframe>
         </div>
 
-        <h3>Nouvelle carte generee</h3>
+        <h3 style="font-size: large; background-color: rgb(162, 200, 241); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Nouvelle carte générée</h3>
         <p><a href="{{ url_for('serve_result', filename=newly_generated_map, v=newly_generated_map_version) }}" target="_blank" rel="noopener">Ouvrir la nouvelle carte dans un nouvel onglet</a></p>
         <div class="map-wrapper">
           <iframe title="Nouvelle carte" src="{{ url_for('serve_result', filename=newly_generated_map, v=newly_generated_map_version) }}"></iframe>
         </div>
       {% elif latest_map %}
-        <h3>Derniere carte disponible</h3>
+        <h3 style="font-size: large; background-color: rgb(162, 200, 241); border-radius: 13px; gap: 10px; display: flex; justify-content: center;">Dernière carte disponible</h3>
         <p><a href="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
         <div class="map-wrapper">
           <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}"></iframe>

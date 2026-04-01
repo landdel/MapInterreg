@@ -1,7 +1,7 @@
 import folium
 import pandas as pd
 import json
-import shutil
+from pandas.errors import EmptyDataError
 from folium.plugins import MarkerCluster
 import datetime
 import numpy as np
@@ -25,6 +25,8 @@ def read_csv_with_fallbacks(file_path, **kwargs):
             return pd.read_csv(file_path, encoding=encoding, **kwargs)
         except UnicodeDecodeError as exc:
             last_error = exc
+        except EmptyDataError as exc:
+            raise ValueError(f"Le fichier {file_path} est vide.") from exc
 
     if last_error is not None:
         raise last_error
@@ -408,6 +410,9 @@ grouped_points_layer_2.add_to(m)
 # Ajouter le contrôle des couches
 folium.LayerControl().add_to(m)
 
+result_dir = Path("result")
+result_dir.mkdir(parents=True, exist_ok=True)
+
 original_filename = 'result/map'
 latest_filename = 'result/map_latest.html'
 
@@ -419,7 +424,5 @@ filename_with_timecode = original_filename+"_"+timecode+".html"
 
 # Sauvegarder la carte dans un fichier HTML
 m.save(filename_with_timecode)
-shutil.copyfile(filename_with_timecode, latest_filename)
 
 print("Fichier enregistrÃ© avec le nom :", filename_with_timecode)
-print("Derniere carte mise a jour :", latest_filename)

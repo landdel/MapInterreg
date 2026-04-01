@@ -2,41 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=http://127.0.0.1:5000/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MapInterreg</title>
-  <link rel="stylesheet" href="static/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
-  <main class="container">
-    <h1>MapInterreg</h1>
-    <p class="subtitle">Executer le traitement et visualiser les resultats.</p>
-
-    <section class="result">
-      <h2>Charger et visualiser un CSV</h2>
-      <div class="upload-form">
-        <label class="file-label">
-          &#128194; Choisir un fichier .csv
-          <input type="file" id="csv-input" accept=".csv">
-        </label>
-      </div>
-      <p id="csv-status"></p>
-      <div id="csv-map"></div>
-    </section>
-
-    <section class="result">
-      <h2>Dernier resultat</h2>
-      <p class="download-links">
-        <a href="result/map_latest.html" download>Telecharger la carte</a>
-        <a href="locations.csv" download>Telecharger locations.csv</a>
-      </p>
-      <p><a href="result/map_latest.html?v=latest" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
-      <div class="map-wrapper">
-        <iframe title="Carte" src="result/map_latest.html?v=latest"></iframe>
-      </div>
-    </section>
-  </main>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="static/script.js"></script>
+  <p>Cette page statique ne gere pas l'upload et la regeneration des cartes.</p>
+  <p>Ouvrez l'application Flask ici : <a href="http://127.0.0.1:5000/">http://127.0.0.1:5000/</a></p>
 </body>
 </html>
