@@ -68,6 +68,8 @@ def find_latest_map() -> Optional[Path]:
 @app.route("/", methods=["GET", "POST"])
 def index():
     execution_results = []
+    previous_map = None
+    newly_generated_map = None
 
     if request.method == "POST":
         action = request.form.get("action", "").strip().lower()
@@ -75,6 +77,7 @@ def index():
         if action == "upload_csv":
             uploaded_file = request.files.get("csv_file")
             if uploaded_file and uploaded_file.filename:
+                previous_map = find_latest_map()
                 save_uploaded_csv(uploaded_file, LOCATIONS_FILE)
                 execution_results.append(
                     {
@@ -86,6 +89,8 @@ def index():
                     }
                 )
                 execution_results.append(run_python_script("mapping.py"))
+                if execution_results[-1]["ok"]:
+                    newly_generated_map = find_latest_map()
             else:
                 execution_results.append(
                     {
@@ -99,18 +104,30 @@ def index():
         elif action == "geocode":
             execution_results.append(run_python_script("coordinates.py"))
         elif action == "map":
+            previous_map = find_latest_map()
             execution_results.append(run_python_script("mapping.py"))
+            if execution_results[-1]["ok"]:
+                newly_generated_map = find_latest_map()
         elif action == "all":
             execution_results.append(run_python_script("coordinates.py"))
             if execution_results[-1]["ok"]:
+                previous_map = find_latest_map()
                 execution_results.append(run_python_script("mapping.py"))
+                if execution_results[-1]["ok"]:
+                    newly_generated_map = find_latest_map()
 
     latest_map = find_latest_map()
     latest_map_version = int(latest_map.stat().st_mtime) if latest_map else None
+    previous_map_version = int(previous_map.stat().st_mtime) if previous_map else None
+    newly_generated_map_version = int(newly_generated_map.stat().st_mtime) if newly_generated_map else None
     return render_template(
         "index.html",
         latest_map=latest_map.name if latest_map else None,
         latest_map_version=latest_map_version,
+        previous_map=previous_map.name if previous_map else None,
+        previous_map_version=previous_map_version,
+        newly_generated_map=newly_generated_map.name if newly_generated_map else None,
+        newly_generated_map_version=newly_generated_map_version,
         locations_exists=LOCATIONS_FILE.exists(),
         execution_results=execution_results,
     )

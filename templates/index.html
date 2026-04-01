@@ -56,7 +56,7 @@
     {% endif %}
 
     <section class="result">
-      <h2>Dernier resultat</h2>
+      <h2>Cartes generees</h2>
       <p class="download-links">
         <a href="{{ url_for('download_latest_map') }}">Telecharger la carte</a>
         {% if locations_exists %}
@@ -65,7 +65,21 @@
           <span>locations.csv non généré pour l'instant</span>
         {% endif %}
       </p>
-      {% if latest_map %}
+
+      {% if previous_map and newly_generated_map %}
+        <h3>Carte precedente</h3>
+        <p><a href="{{ url_for('serve_result', filename=previous_map, v=previous_map_version) }}" target="_blank" rel="noopener">Ouvrir l'ancienne carte dans un nouvel onglet</a></p>
+        <div class="map-wrapper">
+          <iframe title="Carte precedente" src="{{ url_for('serve_result', filename=previous_map, v=previous_map_version) }}"></iframe>
+        </div>
+
+        <h3>Nouvelle carte generee</h3>
+        <p><a href="{{ url_for('serve_result', filename=newly_generated_map, v=newly_generated_map_version) }}" target="_blank" rel="noopener">Ouvrir la nouvelle carte dans un nouvel onglet</a></p>
+        <div class="map-wrapper">
+          <iframe title="Nouvelle carte" src="{{ url_for('serve_result', filename=newly_generated_map, v=newly_generated_map_version) }}"></iframe>
+        </div>
+      {% elif latest_map %}
+        <h3>Derniere carte disponible</h3>
         <p><a href="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
         <div class="map-wrapper">
           <iframe title="Carte" src="{{ url_for('serve_result', filename=latest_map, v=latest_map_version) }}"></iframe>
