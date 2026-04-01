@@ -47,6 +47,45 @@ def save_uploaded_csv(uploaded_file, destination: Path) -> None:
     destination.write_text(decoded_text, encoding="utf-8")
 
 
+def read_uploaded_csv(uploaded_file) -> tuple[str, list[str]]:
+    raw_bytes = uploaded_file.read()
+    if not raw_bytes.strip():
+        raise ValueError("Le fichier CSV envoye est vide.")
+
+    encodings = ("utf-8", "utf-8-sig", "cp1252", "latin-1")
+    decoded_text = None
+
+    for encoding in encodings:
+        try:
+            decoded_text = raw_bytes.decode(encoding)
+            break
+        except UnicodeDecodeError:
+            continue
+
+    if decoded_text is None:
+        raise UnicodeDecodeError("unknown", raw_bytes, 0, len(raw_bytes), "Impossible de decoder le CSV")
+
+    rows = list(csv.reader(io.StringIO(decoded_text), delimiter=";"))
+    if not rows or not any(cell.strip() for cell in rows[0]):
+        raise ValueError("Le fichier CSV ne contient pas d'en-tete exploitable.")
+
+    headers = [cell.strip().lower() for cell in rows[0]]
+    return decoded_text, headers
+
+
+def save_csv_text(csv_text: str, destination: Path) -> None:
+    destination.write_text(csv_text, encoding="utf-8")
+
+
+def detect_csv_kind(headers: list[str]) -> str:
+    header_set = set(headers)
+    if {"latitude", "longitude", "category", "type", "name"}.issubset(header_set):
+        return "locations"
+    if {"street", "zipcode", "city", "country", "category", "type", "name"}.issubset(header_set):
+        return "adresses"
+    raise ValueError("Format CSV non reconnu. Colonnes attendues: soit latitude/longitude..., soit street/zipcode/city/country...")
+
+
 def run_python_script(script_name: str) -> dict:
     script_path = BASE_DIR / script_name
     completed = subprocess.run(
@@ -114,17 +153,36 @@ def index():
             if uploaded_file and uploaded_file.filename:
                 previous_map = sync_latest_alias_from_previous_map()
                 try:
-                    save_uploaded_csv(uploaded_file, LOCATIONS_FILE)
-                    execution_results.append(
-                        {
-                            "script": "upload_csv",
-                            "ok": True,
-                            "returncode": 0,
-                            "stdout": f"Fichier charge : {LOCATIONS_FILE.name}",
-                            "stderr": "",
-                        }
-                    )
-                    execution_results.append(run_python_script("mapping.py"))
+                    csv_text, headers = read_uploaded_csv(uploaded_file)
+                    csv_kind = detect_csv_kind(headers)
+
+                    if csv_kind == "locations":
+                        save_csv_text(csv_text, LOCATIONS_FILE)
+                        execution_results.append(
+                            {
+                                "script": "upload_csv",
+                                "ok": True,
+                                "returncode": 0,
+                                "stdout": f"Fichier charge comme locations.csv : {LOCATIONS_FILE.name}",
+                                "stderr": "",
+                            }
+                        )
+                        execution_results.append(run_python_script("mapping.py"))
+                    else:
+                        save_csv_text(csv_text, ADDRESSES_FILE)
+                        execution_results.append(
+                            {
+                                "script": "upload_csv",
+                                "ok": True,
+                                "returncode": 0,
+                                "stdout": f"Fichier charge comme adresses.csv : {ADDRESSES_FILE.name}",
+                                "stderr": "",
+                            }
+                        )
+                        execution_results.append(run_python_script("coordinates.py"))
+                        if execution_results[-1]["ok"]:
+                            execution_results.append(run_python_script("mapping.py"))
+
                     if execution_results[-1]["ok"]:
                         newly_generated_map = find_latest_generated_map()
                 except Exception as exc:
