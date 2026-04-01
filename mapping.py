@@ -170,10 +170,10 @@ legend_html = """
         z-index: 9999; 
         width: 220px;
     ">
-    <b>LÃ©gende :</b><br>
+    <b>Légende :</b><br>
 """
 
-# Ajouter chaque catÃ©gorie avec sa couleur et forme spÃ©cifique
+# Ajouter chaque catégories avec sa couleur et forme spécifique
 for _, row in df_points.iterrows():
     shape = row["shape"]
     color = row["color"]
