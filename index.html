@@ -1,23 +1,40 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <title>MapInterreg - Resultats</title>
+  <title>MapInterreg</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 <body>
   <main class="container">
     <h1>MapInterreg</h1>
-    <p>Version statique compatible Netlify (sans backend).</p>
+    <p class="subtitle">Executer le traitement et visualiser les resultats.</p>
 
-    <section class="actions">
-      <a class="btn" href="result/map_latest.html" target="_blank" rel="noopener">Ouvrir la carte</a>
-      <a class="btn" href="result/map_latest.html" download>Telecharger la carte</a>
-      <a class="btn" href="locations.csv" download>Telecharger locations.csv</a>
+    <section class="result">
+      <h2>Charger et visualiser un CSV</h2>
+      <div class="upload-form">
+        <label class="file-label">
+          &#128194; Choisir un fichier .csv
+          <input type="file" id="csv-input" accept=".csv">
+        </label>
+      </div>
+      <p id="csv-status"></p>
+      <div id="csv-map"></div>
     </section>
 
-    <iframe title="Carte" src="result/map_latest.html"></iframe>
+    <section class="result">
+      <h2>Dernier resultat</h2>
+      <p class="download-links">
+        <a href="result/map_latest.html" download>Telecharger la carte</a>
+        <a href="locations.csv" download>Telecharger locations.csv</a>
+      </p>
+      <p><a href="result/map_latest.html" target="_blank" rel="noopener">Ouvrir la carte dans un nouvel onglet</a></p>
+      <iframe title="Carte" src="result/map_latest.html"></iframe>
+    </section>
   </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="static/script.js"></script>
 </body>
 </html>
