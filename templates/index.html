@@ -10,7 +10,7 @@
 <body>
   <main class="container">
     <h1>Resultats de l'app</h1>
-    <p class="subtitle">Interface web minimaliste pour executer le traitement et ouvrir la carte.</p>
+    <p class="subtitle">Executer le traitement et visualiser les resultats.</p>
 
     <section class="actions">
       <form method="post">
@@ -27,7 +27,10 @@
     <section class="result">
       <h2>Charger et visualiser un CSV</h2>
       <div class="upload-form">
-        <input type="file" id="csv-input" accept=".csv">
+        <label class="file-label">
+          &#128194; Choisir un fichier .csv
+          <input type="file" id="csv-input" accept=".csv">
+        </label>
       </div>
       <p id="csv-status"></p>
       <div id="csv-map"></div>
