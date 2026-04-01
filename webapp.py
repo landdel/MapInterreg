@@ -37,7 +37,10 @@ def find_latest_map() -> Optional[Path]:
         return None
 
     maps = sorted(
-        RESULT_DIR.glob("map_*.html"),
+        (
+            item for item in RESULT_DIR.glob("map_*.html")
+            if item.name != "map_latest.html"
+        ),
         key=lambda item: item.stat().st_mtime,
         reverse=True,
     )
@@ -51,7 +54,31 @@ def index():
     if request.method == "POST":
         action = request.form.get("action", "").strip().lower()
 
-        if action == "geocode":
+        if action == "upload_csv":
+            uploaded_file = request.files.get("csv_file")
+            if uploaded_file and uploaded_file.filename:
+                uploaded_file.save(LOCATIONS_FILE)
+                execution_results.append(
+                    {
+                        "script": "upload_csv",
+                        "ok": True,
+                        "returncode": 0,
+                        "stdout": f"Fichier charge : {LOCATIONS_FILE.name}",
+                        "stderr": "",
+                    }
+                )
+                execution_results.append(run_python_script("mapping.py"))
+            else:
+                execution_results.append(
+                    {
+                        "script": "upload_csv",
+                        "ok": False,
+                        "returncode": 1,
+                        "stdout": "",
+                        "stderr": "Aucun fichier CSV n'a ete fourni.",
+                    }
+                )
+        elif action == "geocode":
             execution_results.append(run_python_script("coordinates.py"))
         elif action == "map":
             execution_results.append(run_python_script("mapping.py"))
@@ -73,7 +100,11 @@ def index():
 
 @app.route("/result/<path:filename>")
 def serve_result(filename: str):
-    return send_from_directory(RESULT_DIR, filename)
+    response = send_from_directory(RESULT_DIR, filename, max_age=0)
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
 
 
 @app.route("/download/map")

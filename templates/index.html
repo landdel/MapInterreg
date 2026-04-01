@@ -26,12 +26,14 @@
 
     <section class="result">
       <h2>Charger et visualiser un CSV</h2>
-      <div class="upload-form">
+      <form method="post" enctype="multipart/form-data" class="upload-form">
+        <input type="hidden" name="action" value="upload_csv">
         <label class="file-label">
           &#128194; Choisir un fichier .csv
-          <input type="file" id="csv-input" accept=".csv">
+          <input type="file" id="csv-input" name="csv_file" accept=".csv">
         </label>
-      </div>
+        <button type="submit">Charger ce CSV et regenerer la carte</button>
+      </form>
       <p id="csv-status"></p>
       <div id="csv-map"></div>
     </section>
